@@ -1,0 +1,43 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(#250358, #440c66);
+  padding: 1rem;
+  border-radius: 6px;
+  width: 400px;
+  min-width: 285px;
+  transition: all 0.2s
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s;
+}
+
+.card-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-content-lesson {
+}
+
+.card-content-bells {
+  text-align: right;
+}
+
+.card-item {
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  margin-bottom: 0;
+}
+
+.card.active {
+  box-shadow: 0 2px 30px rgba(234, 78, 240, 0.4);
+}

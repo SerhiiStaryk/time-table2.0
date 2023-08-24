@@ -1,0 +1,47 @@
+header {
+  color: #f1f1f1;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  text-align: center;
+  background-color: #2d2834;
+  background: radial-gradient(#27212e, #221530);
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+header p {
+  margin: 0;
+}
+
+.select {
+  background: none;
+  color: #fff;
+  padding: 0.5rem;
+  border: none;
+}
+
+option{
+  background: #2d2834;
+}
+
+@media screen and (max-width: 950px) {
+  header {
+    flex-direction: column
+  }
+
+  header h1 {
+
+    order: -1;
+  }
+}
