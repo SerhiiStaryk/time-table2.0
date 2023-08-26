@@ -10,13 +10,11 @@ header {
   align-items: center;
   margin-bottom: 3rem;
   text-align: center;
-  background-color: #2d2834;
-  background: radial-gradient(#27212e, #221530);
+  background-color: #221530;
   flex-wrap: wrap;
 }
 
 header h1 {
-  margin: 0 0 1rem;
   font-size: 1.5rem;
 }
 
@@ -25,14 +23,22 @@ header p {
 }
 
 .select {
-  background: none;
-  color: #fff;
+  color: #d9c9ee;
   padding: 0.5rem;
   border: none;
+  box-shadow: none;
+  background-color: #221530;
 }
 
-option{
-  background: #2d2834;
+option {
+  background: #221530;
+  box-shadow: none;
+  padding: 2rem;
+}
+
+select:focus-visible {
+  border: none;
+  outline: none;
 }
 
 @media screen and (max-width: 950px) {
@@ -41,7 +47,7 @@ option{
   }
 
   header h1 {
-
+    margin-bottom: 1rem;
     order: -1;
   }
 }
