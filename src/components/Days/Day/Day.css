@@ -19,19 +19,18 @@
 
 .card-content {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
 
-.card-content-lesson {
-}
-
-.card-content-bells {
-  text-align: right;
 }
 
 .card-item {
+  width: 100%;
   margin-bottom: 0.5rem;
+  display: flex;
+}
+
+.card-item-time {
+  text-align: right;
+  flex-grow: 1;
 }
 
 .card h3 {

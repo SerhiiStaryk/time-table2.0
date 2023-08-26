@@ -1,15 +1,21 @@
 import './Days.css';
 
 import Day from './Day/Day';
-import { TIME_TABLE_1 } from '../../constants/time-table';
-import { useState } from 'react';
+import { DAYS, SHORT_NAME_DAYS } from '../../constants/days';
+import { TIME_TABLE } from '../../constants/time-table';
 
-const Days = () => {
-  const [timetable, setTimetable] = useState(TIME_TABLE_1)
+const Days = ({ group }) => {
+  const today = new Date();
+  const today_day = DAYS[SHORT_NAME_DAYS[today.getDay()]];
+
   return (
     <ul id="days">
-      {timetable.map((day, idx) => (
-        <Day key={idx} item={day} />
+      {TIME_TABLE[group].map((day, idx) => (
+        <Day
+          key={idx}
+          item={day}
+          today={today_day}
+        />
       ))}
     </ul>
   )
