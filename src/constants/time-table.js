@@ -4,7 +4,6 @@ import { TIME } from './time';
 export const TIME_TABLE_1 = [
   {
     day: DAYS.mon,
-    isToday: true,
     lessons: [
       { name: 'Я досліджую світ', time: TIME[1] },
       { name: 'Математика', time: TIME[2] },
@@ -22,11 +21,10 @@ export const TIME_TABLE_1 = [
       { name: 'Англійська мова', time: TIME[4] },
       { name: 'Українська мова', time: TIME[5] },
     ],
-    isToday: false,
+
   },
   {
     day: DAYS.wed,
-    isToday: false,
     lessons: [
       { name: 'Я досліджую світ', time: TIME[1] },
       { name: 'Християнська етика', time: TIME[2] },
@@ -37,7 +35,6 @@ export const TIME_TABLE_1 = [
   },
   {
     day: DAYS.thu,
-    isToday: false,
     lessons: [
       { name: 'Я досліджую світ', time: TIME[1] },
       { name: 'Українська мова', time: TIME[2] },
@@ -48,7 +45,6 @@ export const TIME_TABLE_1 = [
   },
   {
     day: DAYS.fri,
-    isToday: false,
     lessons: [
       { name: 'ЯДС (українська мова)', time: TIME[1] },
       { name: 'Музика', time: TIME[2] },
@@ -62,7 +58,6 @@ export const TIME_TABLE_1 = [
 export const TIME_TABLE_2 = [
   {
     day: DAYS.mon,
-    isToday: true,
     lessons: [
       { name: 'Я досліджую світ', time: TIME[1] },
       { name: 'Математика', time: TIME[2] },
@@ -80,11 +75,9 @@ export const TIME_TABLE_2 = [
       { name: 'Українська мова', time: TIME[4] },
       { name: 'Англійська мова', time: TIME[5] },
     ],
-    isToday: false,
   },
   {
     day: DAYS.wed,
-    isToday: false,
     lessons: [
       { name: 'Я досліджую світ', time: TIME[1] },
       { name: 'Християнська етика', time: TIME[2] },
@@ -95,7 +88,6 @@ export const TIME_TABLE_2 = [
   },
   {
     day: DAYS.thu,
-    isToday: false,
     lessons: [
       { name: 'Я досліджую світ', time: TIME[1] },
       { name: 'Англійська мова', time: TIME[2] },
@@ -106,7 +98,6 @@ export const TIME_TABLE_2 = [
   },
   {
     day: DAYS.fri,
-    isToday: false,
     lessons: [
       { name: 'Музика', time: TIME[1] },
       { name: 'ЯДС (українська мова)', time: TIME[2] },
