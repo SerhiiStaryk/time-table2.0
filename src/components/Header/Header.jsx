@@ -1,8 +1,9 @@
 import './Header.css';
 
+import { useState } from 'react';
+
 import DateComponent from '../Date/Date';
 import { TIME_TABLE_OPTIONS } from '../../constants/time-table';
-import { useState } from 'react';
 
 const Header = ({ srcImg, onChangeGroup, group }) => {
   const [value, setValue] = useState(group);
