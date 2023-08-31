@@ -101,7 +101,7 @@ export const TIME_TABLE_2 = [
       { name: 'Я досліджую світ', time: TIME[1] },
       { name: 'Англійська мова', time: TIME[2] },
       { name: 'Хореографія', time: TIME[3] },
-      { name: 'Українська (ЯДС)', time: TIME[4] },
+      { name: 'ЯДС (українська мова)', time: TIME[4] },
       { name: 'Українська мова', time: TIME[5] },
     ],
   },
@@ -110,7 +110,7 @@ export const TIME_TABLE_2 = [
     isToday: false,
     lessons: [
       { name: 'Музика', time: TIME[1] },
-      { name: 'Українська (ЯДС)', time: TIME[2] },
+      { name: 'ЯДС (українська мова)', time: TIME[2] },
       { name: 'Українська мова', time: TIME[3] },
       { name: 'Я досліджую світ', time: TIME[4] },
       { name: 'Англійська мова', time: TIME[5] },
