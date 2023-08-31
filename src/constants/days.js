@@ -6,6 +6,6 @@ export const DAYS = {
   'thu': 'Четвер',
   'fri': "П'ятниця",
   'sat': 'Cубота',
-}
+};
 
-export const SHORT_NAME_DAYS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']
+export const SHORT_NAME_DAYS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
