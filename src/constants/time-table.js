@@ -59,7 +59,7 @@ export const TIME_TABLE_2 = [
   {
     day: DAYS.mon,
     lessons: [
-      { name: 'Я досліджую світ', time: TIME[1] },
+      { name: 'Я досліджую світ (природа)', time: TIME[1] },
       { name: 'Математика', time: TIME[2] },
       { name: 'Фізкультура', time: TIME[3] },
       { name: 'Українська мова', time: TIME[4] },
@@ -71,7 +71,7 @@ export const TIME_TABLE_2 = [
     lessons: [
       { name: 'Інформатика', time: TIME[1] },
       { name: 'Матиматика', time: TIME[2] },
-      { name: 'Я досліджую світ', time: TIME[3] },
+      { name: 'Я досліджую світ (труд. нав.)', time: TIME[3] },
       { name: 'Українська мова', time: TIME[4] },
       { name: 'Англійська мова', time: TIME[5] },
     ],
@@ -89,7 +89,7 @@ export const TIME_TABLE_2 = [
   {
     day: DAYS.thu,
     lessons: [
-      { name: 'Я досліджую світ', time: TIME[1] },
+      { name: 'Я досліджую світ (математика)', time: TIME[1] },
       { name: 'Англійська мова', time: TIME[2] },
       { name: 'Хореографія', time: TIME[3] },
       { name: 'ЯДС (українська мова)', time: TIME[4] },
@@ -102,7 +102,7 @@ export const TIME_TABLE_2 = [
       { name: 'Музика', time: TIME[1] },
       { name: 'ЯДС (українська мова)', time: TIME[2] },
       { name: 'Українська мова', time: TIME[3] },
-      { name: 'Я досліджую світ', time: TIME[4] },
+      { name: 'Я досліджую світ (осн. здор.)', time: TIME[4] },
       { name: 'Англійська мова', time: TIME[5] },
     ],
   },
