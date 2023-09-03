@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/time-table2.0/static/css/main.e95929bb.css",
-    "main.js": "/time-table2.0/static/js/main.559db2f4.js",
+    "main.js": "/time-table2.0/static/js/main.0236fc26.js",
     "static/js/787.ed8061f0.chunk.js": "/time-table2.0/static/js/787.ed8061f0.chunk.js",
     "index.html": "/time-table2.0/index.html",
     "main.e95929bb.css.map": "/time-table2.0/static/css/main.e95929bb.css.map",
-    "main.559db2f4.js.map": "/time-table2.0/static/js/main.559db2f4.js.map",
+    "main.0236fc26.js.map": "/time-table2.0/static/js/main.0236fc26.js.map",
     "787.ed8061f0.chunk.js.map": "/time-table2.0/static/js/787.ed8061f0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e95929bb.css",
-    "static/js/main.559db2f4.js"
+    "static/js/main.0236fc26.js"
   ]
 }
