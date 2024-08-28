@@ -2,7 +2,7 @@ import { DAYS } from './days';
 import { TIME } from './time';
 import * as L from '../constants/lessons';
 
-export const TIME_TABLE_1 = [
+const TIME_TABLE_1 = [
   {
     day: DAYS.mon,
     lessons: [
@@ -22,7 +22,6 @@ export const TIME_TABLE_1 = [
       { name: L.YA_DOSLIDZHUYU_SVIT, time: TIME[9] },
       { name: L.KHRYSTYYANSKA_ETYKA, time: TIME[10] },
     ],
-
   },
   {
     day: DAYS.wed,
@@ -57,7 +56,7 @@ export const TIME_TABLE_1 = [
   },
 ];
 
-export const TIME_TABLE_2 = [
+const TIME_TABLE_2 = [
   {
     day: DAYS.mon,
     lessons: [
@@ -111,9 +110,15 @@ export const TIME_TABLE_2 = [
   },
 ];
 
-export const TIME_TABLE_OPTIONS = [
+const TIME_TABLE_OPTIONS = [
   { value: 0, label: 'перша група' },
   { value: 1, label: 'друга група' }
 ];
 
-export const TIME_TABLE = [TIME_TABLE_1, TIME_TABLE_2];
+const TIME_TABLE = [TIME_TABLE_1, TIME_TABLE_2];
+
+
+export {
+  TIME_TABLE,
+  TIME_TABLE_OPTIONS,
+}
