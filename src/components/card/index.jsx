@@ -1,7 +1,7 @@
-import './Day.css';
+import './style.css';
 
-const Day = ({ item, today }) => (
-  <li className={`card ${today === item.day ? 'active' : null}`}>
+const Card = ({ item, today }) => (
+  <div className={`card ${today === item.day ? 'active' : null}`}>
     <h3>{item.day}</h3>
     <div className='card-content'>
       {
@@ -14,7 +14,7 @@ const Day = ({ item, today }) => (
         ))
       }
     </div>
-  </li>
+  </div>
 );
 
-export default Day;
+export default Card;

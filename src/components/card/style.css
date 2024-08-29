@@ -1,15 +1,16 @@
 .card {
+  background: var(--primary-gradient);
+  padding: var(--spacing-base);
+  border-radius: var(--border-radius-base);
+
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   gap: 1rem;
-  background: linear-gradient(#250358, #440c66);
-  padding: 1rem;
-  border-radius: 6px;
-  width: 400px;
+  justify-content: flex-start;
   min-width: 285px;
-  transition: all 0.2s
+  transition: all 0.2s;
+  width: 400px;
 }
 
 .card:hover {
@@ -20,18 +21,17 @@
 
 .card-content {
   width: 100%;
-
 }
 
 .card-item {
-  width: 100%;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-small);
   display: flex;
+  width: 100%;
 }
 
 .card-item-time {
-  text-align: right;
   flex-grow: 1;
+  text-align: right;
 }
 
 .card h3 {
@@ -39,5 +39,5 @@
 }
 
 .card.active {
-  box-shadow: 0 2px 30px rgba(234, 78, 240, 0.4);
+  box-shadow: var(--box-shadow-medium);
 }

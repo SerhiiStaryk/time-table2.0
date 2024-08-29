@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Days from './components/Days/Days';
-import Header from './components/Header/Header';
+import CardList from './components/card-list';
+import Header from './components/header';
 
 function App() {
   const [group, setGroup] = useState(1)
@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Header onChangeGroup={changeGroup} group={group}/>
-      <Days group={group} />
+      <CardList group={group} />
     </>
   );
 }

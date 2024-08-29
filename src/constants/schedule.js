@@ -1,6 +1,5 @@
-import { DAYS } from './days';
-import { TIME } from './time';
-import * as L from '../constants/lessons';
+import { DAYS, TIME } from './date';
+import * as L from './lessons';
 
 const TIME_TABLE_1 = [
   {
@@ -116,7 +115,6 @@ const TIME_TABLE_OPTIONS = [
 ];
 
 const TIME_TABLE = [TIME_TABLE_1, TIME_TABLE_2];
-
 
 export {
   TIME_TABLE,
