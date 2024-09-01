@@ -3,20 +3,35 @@
 
 :root {
   /* Color Palette */
-  --primary-color: #27212e;
-  --secondary-color: #221530;
-  --tertiary-color: #250358;
-  --quaternary-color: #440c66;
-  --text-color: #d9c9ee;
-  --text-color-light: #f1f1f1;
-  --background-color: #2d2834;
+
+  --color50: #f5f6f0;
+  --color100: #e8e9d8;
+  --color200: #d6d6b2;
+  --color300: #bebd86;
+  --color400: #aaa665;
+  --color500: #9b9557;
+  --color600: #857b49;
+  --color700: #6b5f3d;
+  --color800: #5e5239;
+  --color900: #504533;
+  --color950: #2d261b;
+
+  /* Colors */
+  --primary-color: var(--color400);
+  --secondary-color: var(--color100);
+  --tertiary-color: var(--color300);
+  --quaternary-color: var(--color500);
+  --text-color: var(--color950);
+  --text-color-light: var(--color800);
+  --background-color: var(--color200);
 
   /* Gradient */
-  --primary-gradient: linear-gradient(135deg, var(--tertiary-color) 0%, var(--quaternary-color) 100%);
-  --primary-radial-gradient: radial-gradient(circle, var(--primary-color), var(--secondary-color));
+  --primary-gradient: linear-gradient(135deg, var(--color300) 0%, var(--color500) 100%);
+  --secondary-gradient: linear-gradient(180deg, var(--color500) 0%, var(--color200) 100%);
+  --primary-radial-gradient: radial-gradient(circle, var(--color400), var(--color100));
 
   /* Shadows */
-  --box-shadow-medium: 0 2px 30px rgba(234, 78, 240, 0.4);
+  --box-shadow-medium: 0 2px 30px rgba(88, 44, 105, 0.4);
 
   /* Font Sizes */
   --font-size-base: 1rem;
@@ -40,9 +55,23 @@
 
 body {
   background: var(--primary-radial-gradient);
-  background-color: var(--background-color);
   color: var(--text-color);
 
   margin: 0;
   font-family: 'EUkraine', 'Quicksand', sans-serif;
+}
+
+.container {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
 }

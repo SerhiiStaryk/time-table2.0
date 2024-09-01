@@ -1,0 +1,15 @@
+ol {
+  width: 100%;
+  padding-left: 40px;
+}
+
+li {
+  margin-bottom: 15px;
+  font-size: 11px;
+}
+
+@media screen and (max-width: 600px) {
+  ol {
+    padding-left: 20px;
+  }
+}

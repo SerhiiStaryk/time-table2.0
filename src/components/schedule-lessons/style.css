@@ -1,0 +1,24 @@
+.lesson-wrapper {
+  width: 100%;
+}
+
+.lesson {
+  margin-bottom: var(--spacing-small);
+  display: flex;
+  width: 100%;
+}
+
+.lesson-time {
+  flex-grow: 1;
+  text-align: right;
+}
+
+h3.week-day.active {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+  p {
+    font-size: 11px;
+  }
+}
