@@ -1,11 +1,11 @@
 import './style.css';
 import Card from '../card';
 
-const ScheduleLessons = ({ item, today }) => {
+const ScheduleLessons = ({ item, today, index }) => {
   const active = today === item.day;
 
   return (
-    <Card active={active}>
+    <Card active={active} index={index}>
       <h3 className={`week-day ${active ? 'active' : null}`}>{item.day}</h3>
       <div className='lesson-wrapper'>
         {
