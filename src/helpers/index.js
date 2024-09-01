@@ -13,7 +13,10 @@ const getFormattedCurrentDate = () => {
   return `${day} ${MONTHS[month]} ${year}`;
 }
 
+const getArrFromObj = (obj) => Object.values(obj)
+
 export {
+  getArrFromObj,
   getCurrentDay,
   getCurrentDate,
   getFormattedCurrentDate,

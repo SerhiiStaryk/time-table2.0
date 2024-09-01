@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import CardList from './components/card-list';
 import Header from './components/header';
+import LessonsList from './components/lessons-list';
+import ScheduleBells from './components/schedule-bells';
+import Holidays from './components/holiday';
 
 function App() {
   const [group, setGroup] = useState(1)
@@ -11,8 +13,12 @@ function App() {
 
   return (
     <>
-      <Header onChangeGroup={changeGroup} group={group}/>
-      <CardList group={group} />
+      <Header onChangeGroup={changeGroup} group={group} />
+      <LessonsList group={group} />
+      <div className='container'>
+        <ScheduleBells />
+        <Holidays />
+      </div>
     </>
   );
 }

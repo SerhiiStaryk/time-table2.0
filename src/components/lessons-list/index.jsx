@@ -1,14 +1,14 @@
 import './style.css';
 
-import Card from '../card';
 import { DAYS, SHORT_NAME_DAYS } from '../../constants/date';
 import { TIME_TABLE } from '../../constants/schedule';
 import { getCurrentDay } from '../../helpers';
+import ScheduleLessons from '../schedule-lessons';
 
-const CardList = ({ group }) => (
+const LessonsList = ({ group }) => (
   <div id='card-list'>
     {TIME_TABLE[group].map((day, idx) => (
-      <Card
+      <ScheduleLessons
         key={idx}
         item={day}
         today={DAYS[SHORT_NAME_DAYS[getCurrentDay()]]}
@@ -17,4 +17,4 @@ const CardList = ({ group }) => (
   </div>
 );
 
-export default CardList;
+export default LessonsList;

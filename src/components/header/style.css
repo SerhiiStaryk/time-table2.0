@@ -1,5 +1,6 @@
 header {
-  background-color: var(--secondary-color);
+  background-color: var(--background-color);
+  background: var(--secondary-gradient);
   color: var(--text-color-light);
   margin-bottom: var(--spacing-large);
 
@@ -24,8 +25,9 @@ header p {
 }
 
 .select {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
+  border-radius: var(--border-radius-base);
+  background-color: var(--background-color);
+  color: var(--text-color-light);
   padding: var(--spacing-small);
 
   border: none;
@@ -35,6 +37,7 @@ header p {
 option {
   background: var(--secondary-color);
   padding: var(--spacing-medium);
+  color: var(--text-color);
 
   box-shadow: none;
 }
@@ -46,12 +49,16 @@ select:focus-visible {
 
 @media screen and (max-width: 950px) {
   header {
-    flex-direction: column
+    flex-direction: column;
   }
 
   header h1 {
     margin-bottom: var(--spacing-base);
 
     order: -1;
+  }
+
+  .date {
+    margin-bottom: var(--spacing-small);
   }
 }
