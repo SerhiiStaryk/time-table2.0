@@ -6,7 +6,7 @@ import { getCurrentDay } from '../../helpers';
 import ScheduleLessons from '../schedule-lessons';
 
 const LessonsList = ({ group }) => (
-  <div id='card-list'>
+  <div id='lessons-list'>
     {TIME_TABLE[group].map((day, idx) => (
       <ScheduleLessons
         key={idx}

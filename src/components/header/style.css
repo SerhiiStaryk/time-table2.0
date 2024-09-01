@@ -50,6 +50,7 @@ select:focus-visible {
 @media screen and (max-width: 950px) {
   header {
     flex-direction: column;
+    margin-bottom: var(--spacing-medium);
   }
 
   header h1 {

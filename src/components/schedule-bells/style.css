@@ -5,4 +5,11 @@ ol {
 
 li {
   margin-bottom: 15px;
+  font-size: 11px;
+}
+
+@media screen and (max-width: 600px) {
+  ol {
+    padding-left: 20px;
+  }
 }

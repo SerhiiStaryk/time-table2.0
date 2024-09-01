@@ -1,8 +1,14 @@
-#card-list {
+#lessons-list {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
-  margin: 1rem auto;
-  max-width: 95%;
+  align-items: center;
+  padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+#lessons-list {
+  padding: 10px;
+}
 }
