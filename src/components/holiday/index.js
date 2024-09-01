@@ -3,7 +3,7 @@ import Card from '../card'
 
 const Holidays = () => {
   return (
-    <Card>
+    <Card index={0}>
       <h3>Канікули</h3>
       <div>
         <p><b>Канікули осінні: </b> 21.10.2024 - 25.10.2024</p>

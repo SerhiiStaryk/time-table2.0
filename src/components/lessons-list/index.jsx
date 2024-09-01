@@ -10,6 +10,7 @@ const LessonsList = ({ group }) => (
     {TIME_TABLE[group].map((day, idx) => (
       <ScheduleLessons
         key={idx}
+        index={idx}
         item={day}
         today={DAYS[SHORT_NAME_DAYS[getCurrentDay()]]}
       />
