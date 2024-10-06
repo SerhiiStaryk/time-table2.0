@@ -17,9 +17,10 @@ const TIME_TABLE_1 = [
     lessons: [
       { name: L.UKRAYINSKA_MOVA, time: TIME[6] },
       { name: L.FIZKULTURA, time: TIME[7] },
-      { name: L.MATEMATYKA, time: TIME[8] },
-      { name: L.YA_DOSLIDZHUYU_SVIT, time: TIME[9] },
-      { name: L.KHRYSTYYANSKA_ETYKA, time: TIME[10] },
+      { name: L.ANHLIYSKA_MOVA, time: TIME[8] },
+      { name: L.MATEMATYKA, time: TIME[9] },
+      { name: L.YA_DOSLIDZHUYU_SVIT, time: TIME[10] },
+      { name: L.YADS_UKRAYINSKA_MOVA, time: TIME[11] },
     ],
   },
   {
@@ -45,11 +46,10 @@ const TIME_TABLE_1 = [
   {
     day: DAYS.fri,
     lessons: [
-      { name: L.MATEMATYKA, time: TIME[5] },
-      { name: L.YADS_UKRAYINSKA_MOVA, time: TIME[6] },
-      { name: L.ANHLIYSKA_MOVA, time: TIME[7] },
+      { name: L.MATEMATYKA, time: TIME[6] },
+      { name: L.FIZKULTURA, time: TIME[7] },
       { name: L.UKRAYINSKA_MOVA, time: TIME[8] },
-      { name: L.FIZKULTURA, time: TIME[9] },
+      { name: L.KHRYSTYYANSKA_ETYKA, time: TIME[9] },
       { name: L.YA_DOSLIDZHUYU_SVIT, time: TIME[10] },
     ],
   },
@@ -71,9 +71,10 @@ const TIME_TABLE_2 = [
     lessons: [
       { name: L.FIZKULTURA, time: TIME[6] },
       { name: L.UKRAYINSKA_MOVA, time: TIME[7] },
-      { name: L.MATEMATYKA, time: TIME[8] },
-      { name: L.YA_DOSLIDZHUYU_SVIT, time: TIME[9] },
-      { name: L.KHRYSTYYANSKA_ETYKA, time: TIME[10] },
+      { name: L.YADS_UKRAYINSKA_MOVA, time: TIME[8] },
+      { name: L.MATEMATYKA, time: TIME[9] },
+      { name: L.YA_DOSLIDZHUYU_SVIT, time: TIME[10] },
+      { name: L.ANHLIYSKA_MOVA, time: TIME[10] },
     ],
   },
   {
@@ -99,11 +100,10 @@ const TIME_TABLE_2 = [
   {
     day: DAYS.fri,
     lessons: [
-      { name: L.MATEMATYKA, time: TIME[5] },
-      { name: L.ANHLIYSKA_MOVA, time: TIME[6] },
-      { name: L.YADS_UKRAYINSKA_MOVA, time: TIME[7] },
+      { name: L.MATEMATYKA, time: TIME[6] },
+      { name: L.UKRAYINSKA_MOVA, time: TIME[7] },
       { name: L.FIZKULTURA, time: TIME[8] },
-      { name: L.UKRAYINSKA_MOVA, time: TIME[9] },
+      { name: L.KHRYSTYYANSKA_ETYKA, time: TIME[9] },
       { name: L.YA_DOSLIDZHUYU_SVIT, time: TIME[10] },
     ],
   },
