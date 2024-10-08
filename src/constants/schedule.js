@@ -74,7 +74,7 @@ const TIME_TABLE_2 = [
       { name: L.YADS_UKRAYINSKA_MOVA, time: TIME[8] },
       { name: L.MATEMATYKA, time: TIME[9] },
       { name: L.YA_DOSLIDZHUYU_SVIT, time: TIME[10] },
-      { name: L.ANHLIYSKA_MOVA, time: TIME[10] },
+      { name: L.ANHLIYSKA_MOVA, time: TIME[11] },
     ],
   },
   {
