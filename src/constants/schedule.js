@@ -36,11 +36,11 @@ const TIME_TABLE_1 = [
   {
     day: DAYS.thu,
     lessons: [
+      { name: L.MATEMATYKA, time: TIME[6] },
       { name: L.UKRAYINSKA_MOVA, time: TIME[7] },
       { name: L.KHOREOHRAFIYA, time: TIME[8] },
       { name: L.INFORMATYKA, time: TIME[9] },
-      { name: L.MATEMATYKA, time: TIME[10] },
-      { name: L.YA_DOSLIDZHUYU_SVIT, time: TIME[11] },
+      { name: L.YA_DOSLIDZHUYU_SVIT, time: TIME[10] },
     ],
   },
   {
@@ -90,11 +90,11 @@ const TIME_TABLE_2 = [
   {
     day: DAYS.thu,
     lessons: [
+      { name: L.MATEMATYKA, time: TIME[6] },
       { name: L.KHOREOHRAFIYA, time: TIME[7] },
       { name: L.UKRAYINSKA_MOVA, time: TIME[8] },
       { name: L.INFORMATYKA, time: TIME[9] },
-      { name: L.MATEMATYKA, time: TIME[10] },
-      { name: L.YA_DOSLIDZHUYU_SVIT, time: TIME[11] },
+      { name: L.YA_DOSLIDZHUYU_SVIT, time: TIME[10] },
     ],
   },
   {
