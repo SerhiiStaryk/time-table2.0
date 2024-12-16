@@ -13,8 +13,21 @@
   text-align: right;
 }
 
+h3.week-day.active::before {
+  position: absolute;
+  content: '';
+  background: url('../../assets/santa-hat.png');
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  right: -12px;
+  top: -3px;
+}
+
 h3.week-day.active {
   text-decoration: underline;
+  position: relative;
 }
 
 @media screen and (max-width: 600px) {

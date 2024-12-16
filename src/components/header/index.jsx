@@ -2,6 +2,7 @@ import './style.css';
 import { useState } from 'react';
 import { TIME_TABLE_OPTIONS } from '../../constants/schedule';
 import { getFormattedCurrentDate } from '../../helpers';
+import ChristmasLight from '../christmas-light';
 
 const date = getFormattedCurrentDate();
 
@@ -15,6 +16,8 @@ const Header = ({ srcImg, onChangeGroup, group }) => {
 
   return (
     <header>
+      <div className='christmas-tree' />
+      <ChristmasLight />
       <time
         datatime={date}
         className='date'

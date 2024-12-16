@@ -5,10 +5,12 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
+  min-width: 370px;
 }
 
 @media screen and (max-width: 600px) {
-#lessons-list {
-  padding: 10px;
-}
+  #lessons-list {
+    padding: 10px;
+    min-width: 350px;
+  }
 }
