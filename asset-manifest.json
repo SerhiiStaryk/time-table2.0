@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/time-table2.0/static/css/main.87347faf.css",
-    "main.js": "/time-table2.0/static/js/main.9deb9075.js",
-    "static/js/787.ed8061f0.chunk.js": "/time-table2.0/static/js/787.ed8061f0.chunk.js",
+    "main.css": "/time-table2.0/static/css/main.eaedb83b.css",
+    "main.js": "/time-table2.0/static/js/main.98e29da9.js",
+    "static/js/496.ed4f78e1.chunk.js": "/time-table2.0/static/js/496.ed4f78e1.chunk.js",
+    "static/media/christmas-tree.png": "/time-table2.0/static/media/christmas-tree.89a6a0fb4cbc0e91d0cc.png",
     "static/media/e-Ukraine-Regular.otf": "/time-table2.0/static/media/e-Ukraine-Regular.38805a5a6a103eb1aa7d.otf",
     "static/media/e-Ukraine-Bold.otf": "/time-table2.0/static/media/e-Ukraine-Bold.b0b74cb733e17bc41a86.otf",
+    "static/media/santa-hat.png": "/time-table2.0/static/media/santa-hat.30624b023fd07fb589c1.png",
     "index.html": "/time-table2.0/index.html",
-    "main.87347faf.css.map": "/time-table2.0/static/css/main.87347faf.css.map",
-    "main.9deb9075.js.map": "/time-table2.0/static/js/main.9deb9075.js.map",
-    "787.ed8061f0.chunk.js.map": "/time-table2.0/static/js/787.ed8061f0.chunk.js.map"
+    "main.eaedb83b.css.map": "/time-table2.0/static/css/main.eaedb83b.css.map",
+    "main.98e29da9.js.map": "/time-table2.0/static/js/main.98e29da9.js.map",
+    "496.ed4f78e1.chunk.js.map": "/time-table2.0/static/js/496.ed4f78e1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.87347faf.css",
-    "static/js/main.9deb9075.js"
+    "static/css/main.eaedb83b.css",
+    "static/js/main.98e29da9.js"
   ]
 }
