@@ -13,14 +13,12 @@ type Action = { type: 'changeGroup'; payload: Group };
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
     case 'changeGroup':
-      console.log('Reducer:', action.payload); // Лог для перевірки
       return { ...state, group: action.payload };
     default:
       return state;
   }
 };
 
-// Контексти
 const ContextData = createContext<State | null>(null);
 const ContextApi = createContext<{ changeGroup: (group: Group) => void } | null>(null);
 
@@ -44,14 +42,12 @@ const GroupController = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(reducer, defaultState);
 
   const data = useMemo(() => {
-    console.log('Updated group:', state.group); // Лог для перевірки
     return { group: state.group };
   }, [state.group]);
 
   const api = useMemo(
     () => ({
       changeGroup: (group: Group) => {
-        console.log('changeGroup called with:', group); // Лог для перевірки
         dispatch({ type: 'changeGroup', payload: group });
       },
     }),

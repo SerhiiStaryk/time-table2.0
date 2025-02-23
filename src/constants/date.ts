@@ -1,14 +1,16 @@
-const DAYS = {
-  'sun': 'Неділя',
-  'mon': 'Понеділок',
-  'tue': 'Вівторок',
-  'wed': 'Середа',
-  'thu': 'Четвер',
-  'fri': "П'ятниця",
-  'sat': 'Cубота',
+export type DayNames = 'sun' | 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat';
+
+export const DAYS = {
+  sun: 'Неділя',
+  mon: 'Понеділок',
+  tue: 'Вівторок',
+  wed: 'Середа',
+  thu: 'Четвер',
+  fri: "П'ятниця",
+  sat: 'Cубота',
 };
 
-const MONTHS = [
+export const MONTHS = [
   'січня',
   'лютого',
   'березня',
@@ -23,9 +25,9 @@ const MONTHS = [
   'грудня',
 ];
 
-const SHORT_NAME_DAYS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+export const SHORT_NAME_DAYS = Object.keys(DAYS);
 
-const TIME = {
+export const TIME = {
   1: '8.30 - 9.15',
   2: '9.25 - 10.10',
   3: '10.20 - 11.05',
@@ -37,11 +39,4 @@ const TIME = {
   9: '16.00 - 16.40',
   10: '16.55 - 17.35',
   11: '17.50 - 18.30',
-}
-
-export {
-  TIME,
-  DAYS,
-  MONTHS,
-  SHORT_NAME_DAYS,
-}
+};

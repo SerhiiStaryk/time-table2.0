@@ -1,10 +1,32 @@
+import { ReactNode } from 'react';
 import { Box, Card, CardContent, Divider, Typography } from '@mui/material';
 
-const ScheduleLessons = ({ item, today }) => {
+export type Lesson = {
+  name: string;
+  time: string;
+};
+
+export type Item = {
+  day: string;
+  lessons: Lesson[];
+};
+
+const ScheduleLessons = ({ item, today }: { item: Item; today: string }) => {
   const active = today === item.day;
+
+  const Text = ({ children }: { children: ReactNode }) => (
+    <Typography
+      variant='subtitle2'
+      component={'span'}
+      sx={[active ? { color: 'grey.50' } : { color: null }]}
+    >
+      {children}
+    </Typography>
+  );
 
   return (
     <Card
+      key={item.day}
       sx={[
         {
           p: 2,
@@ -33,34 +55,16 @@ const ScheduleLessons = ({ item, today }) => {
         </Typography>
         <Divider sx={{ my: 2, opacity: 0.8, borderColor: 'divider' }} />
         <>
-          {item.lessons.map((lesson, idx) => (
+          {item.lessons.map((lesson: Lesson, idx: number) => (
             <Box
               key={idx}
               sx={{ display: 'flex', justifyContent: 'space-between' }}
             >
               <Box>
-                <Typography
-                  variant='subtitle2'
-                  component={'span'}
-                  sx={[active ? { color: 'grey.50' } : { color: null }]}
-                >
-                  {`${idx + 1}`}.&nbsp;&nbsp;
-                </Typography>
-                <Typography
-                  variant='subtitle2'
-                  component={'span'}
-                  sx={[active ? { color: 'grey.50' } : { color: null }]}
-                >
-                  {lesson.name}
-                </Typography>
+                <Text>{`${idx + 1}`}.&nbsp;&nbsp;</Text>
+                <Text>{lesson.name}</Text>
               </Box>
-              <Typography
-                variant='subtitle2'
-                component={'span'}
-                sx={[active ? { color: 'grey.50' } : { color: null }]}
-              >
-                {lesson.time}
-              </Typography>
+              <Text>{lesson.time}</Text>
             </Box>
           ))}
         </>

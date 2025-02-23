@@ -1,10 +1,15 @@
-import { MONTHS } from '../constants/date';
+import { DayNames, DAYS, MONTHS } from '../constants/date';
 
-const getCurrentDate = () => new Date();
+export const getCurrentDate = () => new Date();
 
-const getCurrentDay = (): number => getCurrentDate().getDay();
+export const getCurrentDay = (): DayNames => {
+  const dayIndex = new Date().getDay();
+  const days: DayNames[] = Object.keys(DAYS) as DayNames[];
 
-const getFormattedCurrentDate = () => {
+  return days[dayIndex];
+};
+
+export const getFormattedCurrentDate = () => {
   const currentDate = new Date();
   const day = currentDate.getDate();
   const month = currentDate.getMonth();
@@ -13,6 +18,4 @@ const getFormattedCurrentDate = () => {
   return `${day} ${MONTHS[month]} ${year}`;
 };
 
-const getArrFromObj = (obj: Record<string, string | number>) => Object.values(obj);
-
-export { getArrFromObj, getCurrentDay, getCurrentDate, getFormattedCurrentDate };
+export const getArrFromObj = (obj: Record<string, string | number>) => Object.values(obj);
