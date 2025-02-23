@@ -5,7 +5,4 @@ import react from '@vitejs/plugin-react-swc';
 export default defineConfig({
   plugins: [react()],
   base: '/time-table2.0/',
-  server: {
-    host: true,
-  },
 });
