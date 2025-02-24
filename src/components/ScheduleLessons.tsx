@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { Box, Card, CardContent, Divider, Typography } from '@mui/material';
+import { DayNames, DAYS } from '../constants/date';
 
 export type Lesson = {
   name: string;
@@ -11,8 +12,10 @@ export type Item = {
   lessons: Lesson[];
 };
 
-const ScheduleLessons = ({ item, today }: { item: Item; today: string }) => {
-  const active = today === item.day;
+const ScheduleLessons = ({ item, today }: { item: Item; today: DayNames }) => {
+  const active = DAYS[today] === item.day;
+
+  console.log('item.day', item.day);
 
   const Text = ({ children }: { children: ReactNode }) => (
     <Typography

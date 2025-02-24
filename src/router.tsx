@@ -6,7 +6,7 @@ import HomePage from './pages/Home';
 const router = createBrowserRouter(
   [
     {
-      path: '/',
+      path: '/time-table2.0/',
       element: <Layout />,
       children: [
         { path: '', element: <HomePage /> },
