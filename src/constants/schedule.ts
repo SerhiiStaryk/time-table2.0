@@ -59,11 +59,11 @@ const TIME_TABLE_2 = [
   {
     day: DAYS.mon,
     lessons: [
-      { name: L.UKRAYINSKA_MOVA, time: TIME[7] },
-      { name: L.ANHLIYSKA_MOVA, time: TIME[8] },
-      { name: L.MATEMATYKA, time: TIME[9] },
-      { name: L.OBRAZOTVORCHE, time: TIME[10] },
-      { name: L.YA_DOSLIDZHUYU_SVIT, time: TIME[11] },
+      { name: L.UKRAYINSKA_MOVA, time: TIME[6] },
+      { name: L.ANHLIYSKA_MOVA, time: TIME[7] },
+      { name: L.MATEMATYKA, time: TIME[8] },
+      { name: L.OBRAZOTVORCHE, time: TIME[9] },
+      { name: L.YA_DOSLIDZHUYU_SVIT, time: TIME[10] },
     ],
   },
   {
@@ -115,3 +115,26 @@ export const TIME_TABLE_OPTIONS = [
 ];
 
 export const TIME_TABLE = { first: TIME_TABLE_1, second: TIME_TABLE_2 };
+
+export const HOLIDAYS = [
+  {
+    name: 'Канікули осінні',
+    start: '21.10.2024',
+    end: '25.10.2024',
+  },
+  {
+    name: 'Канікули зимові',
+    start: '23.12.2024',
+    end: '07.01.2025',
+  },
+  {
+    name: 'Канікули весняні',
+    start: '24.03.2025',
+    end: '28.03.2025',
+  },
+  {
+    name: 'Великодні святкування',
+    start: '14.04.2025',
+    end: '21.04.2025',
+  },
+];

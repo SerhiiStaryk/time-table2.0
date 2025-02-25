@@ -7,7 +7,6 @@ import { CssBaseline } from '@mui/material';
 const App = (props: { disableCustomTheme?: boolean }) => (
   <AppTheme {...props}>
     <CssBaseline enableColorScheme />
-
     <GroupController>
       <RouterProvider router={router} />
     </GroupController>

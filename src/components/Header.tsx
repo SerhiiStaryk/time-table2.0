@@ -1,25 +1,22 @@
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import { Box, Container, MenuItem, Select } from '@mui/material';
-import { TIME_TABLE_OPTIONS } from '../constants/schedule';
-import { getFormattedCurrentDate } from '../helpers';
-import { Group, useGroupApi, useGroupData } from '../controller/GroupController';
+import { Box, AppBar, Select, Toolbar, MenuItem, Container, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { getFormattedCurrentDate } from '../helpers';
+import { TIME_TABLE_OPTIONS } from '../constants/schedule';
+import { Group, useGroupApi, useGroupData } from '../controller/GroupController';
 import ColorModeIconDropdown from '../theme/ColorModeIconDropdown';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
   flexShrink: 0,
-  borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,
-  backdropFilter: 'blur(24px)',
+  display: 'flex',
   border: '1px solid',
-  borderColor: theme.palette.divider,
-  backgroundColor: `rgba(${theme.palette.background.default}, 0.4)`,
-  boxShadow: theme.shadows[1],
   padding: '8px 12px',
+  alignItems: 'center',
+  boxShadow: theme.shadows[1],
+  backdropFilter: 'blur(24px)',
+  justifyContent: 'space-between',
+  borderColor: theme.palette.divider,
+  borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,
+  backgroundColor: `rgba(${theme.palette.background.default}, 0.4)`,
 }));
 
 const Header = () => {
@@ -48,45 +45,41 @@ const Header = () => {
             sx={{
               px: 0,
               flexGrow: 1,
+              gap: [1, 0],
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
               flexDirection: ['column', 'row'],
-              gap: [1, 0],
             }}
           >
             <Typography
               component='p'
-              sx={{
-                color: 'text.secondary',
-              }}
+              sx={{ color: 'text.secondary' }}
             >
               {date}
             </Typography>
             <Typography
               variant='h5'
               component='div'
-              sx={{
-                color: 'text.secondary',
-              }}
+              sx={{ color: 'text.secondary' }}
             >
               Розклад уроків
             </Typography>
-            <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
+            <Box sx={{ gap: 2, display: 'flex', alignItems: 'center' }}>
               <Select
-                labelId='select-label'
-                id='demo-simple-select'
-                value={group}
                 label='Age'
-                onChange={e => changeGroup(e.target.value as Group)}
+                value={group}
+                labelId='select-label'
                 sx={{ minWidth: 200 }}
+                id='demo-simple-select'
+                onChange={e => changeGroup(e.target.value as Group)}
               >
-                {TIME_TABLE_OPTIONS.map(option => (
+                {TIME_TABLE_OPTIONS.map(({ value, label }) => (
                   <MenuItem
-                    key={option.value}
-                    value={option.value}
+                    key={value}
+                    value={value}
                   >
-                    {option.label}
+                    {label}
                   </MenuItem>
                 ))}
               </Select>

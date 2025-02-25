@@ -1,26 +1,33 @@
-import { useColorScheme } from '@mui/material/styles';
 import MenuItem from '@mui/material/MenuItem';
+import { useColorScheme } from '@mui/material/styles';
 import Select, { SelectProps } from '@mui/material/Select';
+
+const menu = [
+  { value: 'system', label: 'System' },
+  { value: 'light', label: 'Light' },
+  { value: 'dark', label: 'Dark' },
+];
 
 export default function ColorModeSelect(props: SelectProps) {
   const { mode, setMode } = useColorScheme();
 
-  if (!mode || !setMode) {
-    return null;
-  }
+  if (!mode || !setMode) return null;
 
   return (
     <Select
-      value={mode}
-      onChange={event => setMode(event.target.value as 'system' | 'light' | 'dark')}
-      inputProps={{
-        'data-screenshot': 'toggle-mode',
-      }}
       {...props}
+      value={mode}
+      inputProps={{ 'data-screenshot': 'toggle-mode' }}
+      onChange={event => setMode(event.target.value as 'system' | 'light' | 'dark')}
     >
-      <MenuItem value='system'>System</MenuItem>
-      <MenuItem value='light'>Light</MenuItem>
-      <MenuItem value='dark'>Dark</MenuItem>
+      {menu.map(item => (
+        <MenuItem
+          key={item.value}
+          value={item.value}
+        >
+          {item.label}
+        </MenuItem>
+      ))}
     </Select>
   );
 }

@@ -15,8 +15,6 @@ export type Item = {
 const ScheduleLessons = ({ item, today }: { item: Item; today: DayNames }) => {
   const active = DAYS[today] === item.day;
 
-  console.log('item.day', item.day);
-
   const Text = ({ children }: { children: ReactNode }) => (
     <Typography
       variant='subtitle2'

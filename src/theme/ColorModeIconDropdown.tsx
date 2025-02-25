@@ -1,38 +1,41 @@
-import * as React from 'react';
+import { Fragment, useState } from 'react';
+import { Box, Menu, MenuItem } from '@mui/material';
 import DarkModeIcon from '@mui/icons-material/DarkModeRounded';
 import LightModeIcon from '@mui/icons-material/LightModeRounded';
-import Box from '@mui/material/Box';
 import IconButton, { IconButtonOwnProps } from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import { useColorScheme } from '@mui/material/styles';
 
 export default function ColorModeIconDropdown(props: IconButtonOwnProps) {
   const { mode, systemMode, setMode } = useColorScheme();
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+
   const open = Boolean(anchorEl);
+
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   const handleMode = (targetMode: 'system' | 'light' | 'dark') => () => {
     setMode(targetMode);
     handleClose();
   };
+
   if (!mode) {
     return (
       <Box
         data-screenshot='toggle-mode'
         sx={theme => ({
-          verticalAlign: 'bottom',
-          display: 'inline-flex',
           width: '2.25rem',
           height: '2.25rem',
-          borderRadius: theme.shape.borderRadius,
           border: '1px solid',
+          display: 'inline-flex',
+          verticalAlign: 'bottom',
           borderColor: theme.palette.divider,
+          borderRadius: theme.shape.borderRadius,
         })}
       />
     );
@@ -43,32 +46,30 @@ export default function ColorModeIconDropdown(props: IconButtonOwnProps) {
     dark: <DarkModeIcon />,
   }[resolvedMode];
   return (
-    <React.Fragment>
+    <Fragment>
       <IconButton
-        data-screenshot='toggle-mode'
-        onClick={handleClick}
-        disableRipple
-        size='small'
-        aria-controls={open ? 'color-scheme-menu' : undefined}
-        aria-haspopup='true'
-        aria-expanded={open ? 'true' : undefined}
         {...props}
+        size='small'
+        disableRipple
+        aria-haspopup='true'
+        onClick={handleClick}
+        data-screenshot='toggle-mode'
+        aria-expanded={open ? 'true' : undefined}
+        aria-controls={open ? 'color-scheme-menu' : undefined}
       >
         {icon}
       </IconButton>
       <Menu
-        anchorEl={anchorEl}
-        id='account-menu'
         open={open}
+        id='account-menu'
+        anchorEl={anchorEl}
         onClose={handleClose}
         onClick={handleClose}
         slotProps={{
           paper: {
-            variant: 'outlined',
             elevation: 0,
-            sx: {
-              my: '4px',
-            },
+            variant: 'outlined',
+            sx: { my: '4px' },
           },
         }}
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
@@ -93,6 +94,6 @@ export default function ColorModeIconDropdown(props: IconButtonOwnProps) {
           Dark
         </MenuItem>
       </Menu>
-    </React.Fragment>
+    </Fragment>
   );
 }
