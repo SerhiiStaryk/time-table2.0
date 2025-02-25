@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react-swc';
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/time-table2.0/',
   plugins: [react()],
-  base: 'https://serhiistaryk.github.io/time-table2.0/',
 });
