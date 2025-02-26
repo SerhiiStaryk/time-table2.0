@@ -38,7 +38,7 @@ jobs:
         with:
           name: build
           path: dist/
-          retention-days: 1  # Зберігати артефакти 1 день
+          retention-days: 1  # Артефакт зберігається 1 день
 
   deploy:
     needs: build
@@ -60,10 +60,4 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: './dist'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/up
