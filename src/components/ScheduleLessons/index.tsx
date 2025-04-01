@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Box, CardContent, Divider, GlobalStyles, Typography } from '@mui/material';
+import { Box, CardContent, Divider, Typography } from '@mui/material';
 import { DayNames, DAYS } from '../../constants/date';
 import { Card, CardGlobalStyles } from './styles';
 
