@@ -1,7 +1,7 @@
 import { Grid2 } from '@mui/material';
 import { TIME_TABLE } from '../constants/schedule';
 import { getCurrentDay } from '../helpers';
-import ScheduleLessons from './ScheduleLessons';
+import ScheduleLessons from './ScheduleLessons/';
 import { useGroupData } from '../controller/GroupController';
 
 const LessonsList = () => {
@@ -13,8 +13,11 @@ const LessonsList = () => {
       spacing={2}
       sx={{ mb: 4 }}
     >
-      {TIME_TABLE[group].map(day => (
-        <Grid2 size={{ xs: 12, md: 6 }}>
+      {TIME_TABLE[group].map((day, index) => (
+        <Grid2
+          size={{ xs: 12, md: 6 }}
+          key={index}
+        >
           <ScheduleLessons
             item={day}
             today={getCurrentDay()}
