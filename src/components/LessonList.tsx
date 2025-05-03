@@ -1,4 +1,4 @@
-import { Grid2 } from '@mui/material';
+import { Grid } from '@mui/material';
 import { TIME_TABLE } from '../constants/schedule';
 import { getCurrentDay } from '../helpers';
 import ScheduleLessons from './ScheduleLessons/';
@@ -8,13 +8,13 @@ const LessonsList = () => {
   const { group } = useGroupData();
 
   return (
-    <Grid2
+    <Grid
       container
       spacing={2}
       sx={{ mb: 4 }}
     >
       {TIME_TABLE[group].map((day, index) => (
-        <Grid2
+        <Grid
           size={{ xs: 12, md: 6 }}
           key={index}
         >
@@ -22,9 +22,9 @@ const LessonsList = () => {
             item={day}
             today={getCurrentDay()}
           />
-        </Grid2>
+        </Grid>
       ))}
-    </Grid2>
+    </Grid>
   );
 };
 

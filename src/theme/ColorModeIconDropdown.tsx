@@ -54,6 +54,7 @@ export default function ColorModeIconDropdown(props: IconButtonOwnProps) {
         aria-haspopup='true'
         onClick={handleClick}
         data-screenshot='toggle-mode'
+        sx={{ color : 'text.primary' }}
         aria-expanded={open ? 'true' : undefined}
         aria-controls={open ? 'color-scheme-menu' : undefined}
       >

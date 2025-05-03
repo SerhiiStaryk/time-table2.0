@@ -1,5 +1,5 @@
 import { Box, Card, CardContent, Divider, Typography, useTheme } from '@mui/material';
-import { getArrFromObj } from '../helpers';
+import { getActiveLessonCurrent, getArrFromObj } from '../helpers';
 import { TIME } from '../constants/date';
 
 const ScheduleBells = () => {
@@ -27,14 +27,19 @@ const ScheduleBells = () => {
         </Typography>
         <Divider sx={{ my: 2, opacity: 0.8, borderColor: 'divider' }} />
         <Box component='ol'>
-          {getArrFromObj(TIME).map((item, index) => (
-            <Box
-              key={index}
-              component='li'
-            >
-              {item}
-            </Box>
-          ))}
+          {getArrFromObj(TIME).map((item, index) => {
+            const isLessonCurrent = getActiveLessonCurrent(item.start, item.start);
+
+            return (
+              <Box
+                key={index}
+                component='li'
+              >
+                {item.start} - {item.end}
+                {isLessonCurrent && '✅'}
+              </Box>
+            );
+          })}
         </Box>
       </CardContent>
     </Card>

@@ -2,10 +2,14 @@ import { ReactNode } from 'react';
 import { Box, CardContent, Divider, Typography } from '@mui/material';
 import { DayNames, DAYS } from '../../constants/date';
 import { Card, CardGlobalStyles } from './styles';
+import { getActiveLessonCurrent } from '../../helpers';
 
 export type Lesson = {
   name: string;
-  time: string;
+  time: {
+    start: string;
+    end: string;
+  };
 };
 
 export type Item = {
@@ -16,8 +20,9 @@ export type Item = {
 const ScheduleLessons = ({ item, today }: { item: Item; today: DayNames }) => {
   const active = DAYS[today] === item.day;
 
-  const Text = ({ children }: { children: ReactNode }) => (
+  const Text = ({ mr = 0, children }: { mr?: number | string; children: ReactNode }) => (
     <Typography
+      mr={mr}
       variant='subtitle2'
       component={'span'}
       sx={[{ color: 'text.primary' }]}
@@ -44,18 +49,26 @@ const ScheduleLessons = ({ item, today }: { item: Item; today: DayNames }) => {
           </Typography>
           <Divider sx={{ my: 2, opacity: 0.8, borderColor: 'divider' }} />
           <>
-            {item.lessons.map((lesson: Lesson, idx: number) => (
-              <Box
-                key={idx}
-                sx={{ display: 'flex', justifyContent: 'space-between' }}
-              >
-                <Box>
-                  <Text>{`${idx + 1}`}.&nbsp;&nbsp;</Text>
-                  <Text>{lesson.name}</Text>
+            {item.lessons.map((lesson: Lesson, idx: number) => {
+              const isLessonCurrent = getActiveLessonCurrent(lesson.time.start, lesson.time.end);
+              const isActive = active && isLessonCurrent;
+
+              return (
+                <Box
+                  key={idx}
+                  sx={{ display: 'flex', justifyContent: 'space-between' }}
+                >
+                  <Box>
+                    <Text mr={1}>{`${idx + 1}`}.</Text>
+                    <Text>{lesson.name}</Text>
+                  </Box>
+                  <Text>
+                    {lesson.time.start} - {lesson.time.end}
+                    {isActive && '✅'}
+                  </Text>
                 </Box>
-                <Text>{lesson.time}</Text>
-              </Box>
-            ))}
+              );
+            })}
           </>
         </CardContent>
       </Card>

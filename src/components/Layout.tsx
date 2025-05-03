@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import { Box, Container } from '@mui/material';
+import { Footer } from './Footer';
 
 const Layout = () => (
   <>
@@ -28,6 +29,7 @@ const Layout = () => (
         <Outlet />
       </Container>
     </Box>
+    <Footer />
   </>
 );
 
