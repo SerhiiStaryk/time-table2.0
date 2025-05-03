@@ -5,7 +5,7 @@ declare module '@mui/material/Paper' {
     highlighted: true;
   }
 }
-declare module '@mui/material/styles/createPalette' {
+declare module '@mui/material/styles' {
   interface ColorRange {
     50: string;
     100: string;
@@ -18,8 +18,6 @@ declare module '@mui/material/styles/createPalette' {
     800: string;
     900: string;
   }
-
-  interface PaletteColor extends ColorRange {}
 
   interface Palette {
     baseShadow: string;
@@ -392,6 +390,6 @@ export const shape = {
   borderRadius: 8,
 };
 
-// @ts-ignore
+// @ts-expect-error MUI theme type error
 const defaultShadows: Shadows = ['none', 'var(--template-palette-baseShadow)', ...defaultTheme.shadows.slice(2)];
 export const shadows = defaultShadows;
