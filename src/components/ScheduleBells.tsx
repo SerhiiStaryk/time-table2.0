@@ -28,15 +28,13 @@ const ScheduleBells = () => {
         <Divider sx={{ my: 2, opacity: 0.8, borderColor: 'divider' }} />
         <Box component='ol'>
           {getArrFromObj(TIME).map((item, index) => {
-            const isLessonCurrent = getActiveLessonCurrent(item.start, item.start);
-
+            const isLessonCurrent = getActiveLessonCurrent(item.start, item.end);
             return (
               <Box
                 key={index}
                 component='li'
               >
-                {item.start} - {item.end}
-                {isLessonCurrent && '✅'}
+                {item.start} - {item.end} {isLessonCurrent && '✅'}
               </Box>
             );
           })}
