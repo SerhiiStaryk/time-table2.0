@@ -1,24 +1,24 @@
 import { Grid } from '@mui/material';
 import { TIME_TABLE } from '../constants/schedule';
 import { getCurrentDay } from '../helpers';
-import ScheduleLessons from './ScheduleLessons/';
+import { DayCard } from '../components/DayCard';
 import { useGroupData } from '../controller/GroupController';
 
-const LessonsList = () => {
+const DayList = () => {
   const { group } = useGroupData();
 
   return (
     <Grid
+      mb={4}
       container
       spacing={2}
-      sx={{ mb: 4 }}
     >
       {TIME_TABLE[group].map((day, index) => (
         <Grid
-          size={{ xs: 12, md: 6 }}
           key={index}
+          size={{ xs: 12, md: 6 }}
         >
-          <ScheduleLessons
+          <DayCard
             item={day}
             today={getCurrentDay()}
           />
@@ -28,4 +28,4 @@ const LessonsList = () => {
   );
 };
 
-export default LessonsList;
+export default DayList;

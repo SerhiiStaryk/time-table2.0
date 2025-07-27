@@ -1,8 +1,10 @@
-import { Card, CardContent, Divider, Typography, useTheme } from '@mui/material';
-import { HOLIDAYS } from '../constants/schedule';
+import { Card, CardContent, Typography, useTheme } from '@mui/material';
+import { HOLIDAYS } from '../../constants/schedule';
+import { Divider } from '../Divider';
 
-const Holidays = () => {
+export const HolidayCard = () => {
   const theme = useTheme();
+
   return (
     <Card
       sx={[
@@ -16,11 +18,11 @@ const Holidays = () => {
         <Typography
           variant='h6'
           component='h3'
-          sx={{ textAlign: 'center' }}
+          align='center'
         >
           Канікули
         </Typography>
-        <Divider sx={{ my: 2, opacity: 0.8, borderColor: 'divider' }} />
+        <Divider />
         {HOLIDAYS.map(({ name, start, end }) => (
           <Typography
             key={name}
@@ -34,5 +36,3 @@ const Holidays = () => {
     </Card>
   );
 };
-
-export default Holidays;

@@ -1,26 +1,22 @@
 import { Grid } from '@mui/material';
-import Holidays from '../../components/Holidays';
-import LessonsList from '../../components/LessonList';
-import ScheduleBells from '../../components/ScheduleBells';
+import { HolidayCard } from '../../components/HolidayCard';
+import LessonsList from '../../DayList/LessonList';
+import { BellCard } from '../../components/BellCard';
 
-const HomePage = () => {
-  return (
-    <>
-      <LessonsList />
-      <Grid
-        container
-        spacing={2}
-        sx={{ width: '100%' }}
-      >
-        <Grid size={{ xs: 12, md: 6 }}>
-          <ScheduleBells />
-        </Grid>
-        <Grid size={{ xs: 12, md: 6 }}>
-          <Holidays />
-        </Grid>
+export const HomePage = () => (
+  <>
+    <LessonsList />
+    <Grid
+      container
+      spacing={2}
+      width={'100%'}
+    >
+      <Grid size={{ xs: 12, md: 6 }}>
+        <BellCard />
       </Grid>
-    </>
-  );
-};
-
-export default HomePage;
+      <Grid size={{ xs: 12, md: 6 }}>
+        <HolidayCard />
+      </Grid>
+    </Grid>
+  </>
+);

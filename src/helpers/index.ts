@@ -9,6 +9,8 @@ export const getCurrentDay = (): DayNames => {
   return days[dayIndex];
 };
 
+export const getCurrentYear = () => new Date().getFullYear();
+
 export const getFormattedCurrentDate = () => {
   const currentDate = new Date();
   const day = currentDate.getDate();
