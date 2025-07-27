@@ -4,6 +4,7 @@ import DarkModeIcon from '@mui/icons-material/DarkModeRounded';
 import LightModeIcon from '@mui/icons-material/LightModeRounded';
 import IconButton, { IconButtonOwnProps } from '@mui/material/IconButton';
 import { useColorScheme } from '@mui/material/styles';
+import { ThemeMode } from './types';
 
 export default function ColorModeIconDropdown(props: IconButtonOwnProps) {
   const { mode, systemMode, setMode } = useColorScheme();
@@ -19,7 +20,7 @@ export default function ColorModeIconDropdown(props: IconButtonOwnProps) {
     setAnchorEl(null);
   };
 
-  const handleMode = (targetMode: 'system' | 'light' | 'dark') => () => {
+  const handleMode = (targetMode: ThemeMode) => () => {
     setMode(targetMode);
     handleClose();
   };

@@ -1,6 +1,7 @@
 import MenuItem from '@mui/material/MenuItem';
 import { useColorScheme } from '@mui/material/styles';
 import Select, { SelectProps } from '@mui/material/Select';
+import { ThemeMode } from './types';
 
 const menu = [
   { value: 'system', label: 'System' },
@@ -18,7 +19,7 @@ export default function ColorModeSelect(props: SelectProps) {
       {...props}
       value={mode}
       inputProps={{ 'data-screenshot': 'toggle-mode' }}
-      onChange={event => setMode(event.target.value as 'system' | 'light' | 'dark')}
+      onChange={event => setMode(event.target.value as ThemeMode)}
     >
       {menu.map(item => (
         <MenuItem
