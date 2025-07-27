@@ -22,13 +22,13 @@ export default defineConfig({
         lang: 'uk-UA',
         icons: [
           {
-            src: 'icon512_maskable.png',
+            src: '/time-table2.0/icon512_maskable.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',
           },
           {
-            src: 'icon512_rounded.png',
+            src: '/time-table2.0/icon512_rounded.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any',
@@ -36,13 +36,13 @@ export default defineConfig({
         ],
         screenshots: [
           {
-            src: 'screenshots/wide-screenshot1.png',
+            src: '/time-table2.0/wide-screenshot1.png',
             sizes: '1280x720',
             type: 'image/png',
             form_factor: 'wide',
           },
           {
-            src: 'screenshots/narrow-screenshot1.png',
+            src: '/time-table2.0/narrow-screenshot1.png',
             sizes: '360x640',
             type: 'image/png',
             form_factor: 'narrow',
