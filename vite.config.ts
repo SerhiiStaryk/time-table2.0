@@ -9,7 +9,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'icon512_maskable.png', 'icon512_rounded.png'],
+      includeAssets: ['icon512_maskable.png', 'icon512_rounded.png'],
       manifest: {
         id: '/time-table2.0/',
         name: 'timetable2.0',
@@ -22,13 +22,13 @@ export default defineConfig({
         lang: 'uk-UA',
         icons: [
           {
-            src: '/time-table2.0/icon512_maskable.png',
+            src: '/time-table2.0//icon512_maskable.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',
           },
           {
-            src: '/time-table2.0/icon512_rounded.png',
+            src: '/time-table2.0//icon512_rounded.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any',
@@ -36,13 +36,13 @@ export default defineConfig({
         ],
         screenshots: [
           {
-            src: '/time-table2.0/wide-screenshot1.png',
+            src: '/time-table2.0//wide-screenshot1.png',
             sizes: '1280x720',
             type: 'image/png',
             form_factor: 'wide',
           },
           {
-            src: '/time-table2.0/narrow-screenshot1.png',
+            src: '/time-table2.0//narrow-screenshot1.png',
             sizes: '360x640',
             type: 'image/png',
             form_factor: 'narrow',
