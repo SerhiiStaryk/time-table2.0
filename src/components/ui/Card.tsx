@@ -1,6 +1,18 @@
-import { Card as MuiCard, styled } from '@mui/material';
+import { Box, GlobalStyles, styled } from '@mui/material';
 
-export const Card = styled(MuiCard, {
+export const CardGlobalStyles = () => (
+  <GlobalStyles
+    styles={`
+          @property --angle{
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+          }
+        `}
+  />
+);
+
+export const Card = styled(Box, {
   shouldForwardProp: prop => prop !== 'active', // Prevents `active` from being passed to DOM
 })<{ active?: boolean }>(({ theme, active }) => ({
   color: theme.palette.primary.contrastText,
