@@ -53,14 +53,16 @@ This project is configured to deploy to GitHub Pages. The deployment workflow is
 
 ## Project Structure
 
-src/ # Main source code
-├── components/ # Reusable UI components
-├── constants/ # Static data (lessons, schedule, etc.)
-├── controller/ # State management (e.g., group selection)
-├── theme/ # Custom Material UI theme and color mode
-├── pages/ # Application pages
-├── helpers/ # Utility functions
-public/ # Static assets (icons, screenshots, etc.)
+```bash
+src/               # Main source code
+├── components/    # Reusable UI components
+├── constants/     # Static data (lessons, schedule, etc.)
+├── controller/    # State management (e.g., group selection)
+├── theme/         # Custom Material UI theme and color mode
+├── pages/         # Application pages
+├── helpers/       # Utility functions
+public/            # Static assets (icons, screenshots, etc.)
+
 
 ## License
 
