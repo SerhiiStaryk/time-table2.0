@@ -62,7 +62,7 @@ src/               # Main source code
 ├── pages/         # Application pages
 ├── helpers/       # Utility functions
 public/            # Static assets (icons, screenshots, etc.)
-
+```
 
 ## License
 
