@@ -1,13 +1,15 @@
 import { Box, AppBar, Select, MenuItem, Container, Typography } from '@mui/material';
 import { getFormattedCurrentDate } from '../../helpers';
-import { TIME_TABLE_OPTIONS } from '../../constants/schedule';
-import { Group, useGroupApi, useGroupData } from '../../controller/GroupController';
 import ColorModeIconDropdown from '../../theme/ColorModeIconDropdown';
 import { Toolbar } from '../ui/Toolbar';
+import { CHILDREN_OPTIONS } from '../../constants/children';
+import { useChildData } from '../../controller/ChildController/hooks/useChildData';
+import { useChildApi } from '../../controller/ChildController/hooks/useChildApi';
+import { Child } from '../../controller/ChildController';
 
 export const Header = () => {
-  const { group } = useGroupData();
-  const { changeGroup } = useGroupApi();
+  const { child } = useChildData();
+  const { changeChild } = useChildApi();
 
   return (
     <AppBar
@@ -51,11 +53,11 @@ export const Header = () => {
             </Typography>
             <Box sx={{ gap: 2, display: 'flex', alignItems: 'center' }}>
               <Select
-                value={group}
+                value={child}
                 sx={{ minWidth: 200 }}
-                onChange={e => changeGroup(e.target.value as Group)}
+                onChange={e => changeChild(e.target.value as Child)}
               >
-                {TIME_TABLE_OPTIONS.map(({ value, label }) => (
+                {CHILDREN_OPTIONS.map(({ value, label }) => (
                   <MenuItem
                     key={value}
                     value={value}
