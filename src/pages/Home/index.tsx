@@ -2,9 +2,11 @@ import { Grid } from '@mui/material';
 import { HolidayCard } from '../../components/HolidayCard';
 import LessonsList from '../../DayList/LessonList';
 import { BellCard } from '../../components/BellCard';
+import { Switcher } from '../../components/Switcher';
 
 export const HomePage = () => (
   <>
+    <Switcher />
     <LessonsList />
     <Grid
       container

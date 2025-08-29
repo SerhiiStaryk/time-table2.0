@@ -22,7 +22,7 @@ export const Layout = () => (
           display: 'flex',
           alignItems: 'center',
           pb: { xs: 8, sm: 6 },
-          pt: { xs: 24, sm: 18 },
+          pt: { xs: 24, sm: 15 },
           flexDirection: 'column',
         }}
       >
