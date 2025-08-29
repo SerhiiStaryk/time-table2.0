@@ -109,11 +109,6 @@ const TIME_TABLE_2 = [
   },
 ];
 
-export const TIME_TABLE_OPTIONS = [
-  { value: 'first', label: 'перша група' },
-  { value: 'second', label: 'друга група' },
-];
-
 export const TIME_TABLE = { first: TIME_TABLE_1, second: TIME_TABLE_2 };
 
 export const HOLIDAYS = [
