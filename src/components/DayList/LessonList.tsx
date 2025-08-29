@@ -2,7 +2,7 @@ import { Grid } from '@mui/material';
 import { TIME_TABLE } from '../../constants/schedule';
 import { getCurrentDay } from '../../helpers';
 import { DayCard } from '../DayCard';
-import { useGroupData } from '../../controller/GroupController';
+import { useGroupData } from '../../controller/GroupController/hooks/useGroupData';
 
 const DayList = () => {
   const { group } = useGroupData();

@@ -1,10 +1,12 @@
-import { useContext, useMemo, useReducer, ReactNode, createContext } from 'react';
+import { useMemo, useReducer, ReactNode } from 'react';
+import { ContextData } from './context/ContextData';
+import { ContextApi } from './context/ContextApi';
 
 export type Group = 'first' | 'second';
 
-interface State {
+export type State = {
   group: Group;
-}
+};
 
 const defaultState: State = { group: 'second' };
 
@@ -17,25 +19,6 @@ const reducer = (state: State, action: Action): State => {
     default:
       return state;
   }
-};
-
-const ContextData = createContext<State | null>(null);
-const ContextApi = createContext<{ changeGroup: (group: Group) => void } | null>(null);
-
-export const useGroupData = () => {
-  const context = useContext(ContextData);
-  if (!context) {
-    throw new Error('useGroupData must be used within a GroupController');
-  }
-  return context;
-};
-
-export const useGroupApi = () => {
-  const context = useContext(ContextApi);
-  if (!context) {
-    throw new Error('useGroupApi must be used within a GroupController');
-  }
-  return context;
 };
 
 const GroupController = ({ children }: { children: ReactNode }) => {
