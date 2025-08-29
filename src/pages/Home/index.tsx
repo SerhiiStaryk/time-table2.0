@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material';
 import { HolidayCard } from '../../components/HolidayCard';
-import LessonsList from '../../DayList/LessonList';
+import LessonsList from '../../components/DayList/LessonList';
 import { BellCard } from '../../components/BellCard';
 import { Switcher } from '../../components/Switcher';
 
