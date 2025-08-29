@@ -3,9 +3,11 @@ import { TIME_TABLE } from '../../constants/schedule';
 import { getCurrentDay } from '../../helpers';
 import { DayCard } from '../DayCard';
 import { useGroupData } from '../../controller/GroupController/hooks/useGroupData';
+import { useChildData } from '../../controller/ChildController/hooks/useChildData';
 
 const DayList = () => {
   const { group } = useGroupData();
+  const { child } = useChildData();
 
   return (
     <Grid
@@ -13,7 +15,7 @@ const DayList = () => {
       container
       spacing={2}
     >
-      {TIME_TABLE[group].map((day, index) => (
+      {TIME_TABLE[child][group].map((day, index) => (
         <Grid
           key={index}
           size={{ xs: 12, md: 6 }}

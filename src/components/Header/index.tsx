@@ -1,11 +1,16 @@
 import { Box, AppBar, Select, MenuItem, Container, Typography } from '@mui/material';
 import { getFormattedCurrentDate } from '../../helpers';
-import { TIME_TABLE_OPTIONS } from '../../constants/schedule';
 import ColorModeIconDropdown from '../../theme/ColorModeIconDropdown';
 import { Toolbar } from '../ui/Toolbar';
 import { CHILDREN_OPTIONS } from '../../constants/children';
+import { useChildData } from '../../controller/ChildController/hooks/useChildData';
+import { useChildApi } from '../../controller/ChildController/hooks/useChildApi';
+import { Child } from '../../controller/ChildController';
 
 export const Header = () => {
+  const { child } = useChildData();
+  const { changeChild } = useChildApi();
+
   return (
     <AppBar
       position='fixed'
@@ -48,9 +53,9 @@ export const Header = () => {
             </Typography>
             <Box sx={{ gap: 2, display: 'flex', alignItems: 'center' }}>
               <Select
-                value='Maksym'
+                value={child}
                 sx={{ minWidth: 200 }}
-                // onChange={e => changeGroup(e.target.value as Group)}
+                onChange={e => changeChild(e.target.value as Child)}
               >
                 {CHILDREN_OPTIONS.map(({ value, label }) => (
                   <MenuItem

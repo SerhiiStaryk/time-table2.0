@@ -24,9 +24,7 @@ const reducer = (state: State, action: Action): State => {
 const GroupController = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(reducer, defaultState);
 
-  const data = useMemo(() => {
-    return { group: state.group };
-  }, [state.group]);
+  const data = useMemo(() => ({ group: state.group }), [state.group]);
 
   const api = useMemo(
     () => ({
