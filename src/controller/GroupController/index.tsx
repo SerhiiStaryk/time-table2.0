@@ -1,6 +1,7 @@
 import { useMemo, useReducer, ReactNode } from 'react';
 import { ContextData } from './context/ContextData';
 import { ContextApi } from './context/ContextApi';
+import { getLocalStorageItem, setLocalStorageItem } from '../../helpers';
 
 export type Group = 'first' | 'second';
 
@@ -8,13 +9,16 @@ export type State = {
   group: Group;
 };
 
-const defaultState: State = { group: 'second' };
+const defaultGroup: Group = (getLocalStorageItem('group') as Group) ?? ('first' as Group);
+
+const defaultState: State = { group: defaultGroup };
 
 type Action = { type: 'changeGroup'; payload: Group };
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
     case 'changeGroup':
+      setLocalStorageItem('group', action.payload);
       return { ...state, group: action.payload };
     default:
       return state;

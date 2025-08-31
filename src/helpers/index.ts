@@ -38,3 +38,27 @@ export const getActiveLessonCurrent = (start: string, end: string): boolean => {
 
   return nowMinutes >= startMinutes && nowMinutes <= endMinutes;
 };
+
+export const getLocalStorageItem = (key: string) => {
+  if (typeof window !== 'undefined') {
+    return localStorage.getItem(key);
+  } else {
+    return null;
+  }
+};
+
+export const setLocalStorageItem = (key: string, value: string) => {
+  if (typeof window !== 'undefined') {
+    localStorage.setItem(key, value);
+  } else {
+    console.warn('localStorage is not available');
+  }
+};
+
+export const removeLocalStorageItem = (key: string) => {
+  if (typeof window !== 'undefined') {
+    localStorage.removeItem(key);
+  } else {
+    console.warn('localStorage is not available');
+  }
+};

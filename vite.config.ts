@@ -12,8 +12,8 @@ export default defineConfig({
       includeAssets: ['icon512_maskable.png', 'icon512_rounded.png'],
       manifest: {
         id: '/time-table2.0/',
-        name: 'timetable2.0',
-        short_name: 'timetable2.0',
+        name: 'Розклад',
+        short_name: 'Розклад',
         description: 'Розклад уроків',
         start_url: '/time-table2.0/',
         display: 'standalone',

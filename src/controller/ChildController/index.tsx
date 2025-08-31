@@ -1,6 +1,7 @@
 import { useMemo, useReducer } from 'react';
 import { ContextData } from './context/ContextData';
 import { ContextApi } from './context/ContextApi';
+import { getLocalStorageItem, setLocalStorageItem } from '../../helpers';
 
 export type Child = 'Maksym' | 'Veronika';
 
@@ -8,13 +9,16 @@ export type State = {
   child: Child;
 };
 
-const defaultState: State = { child: 'Maksym' };
+const defaultChild: Child = (getLocalStorageItem('child') as Child) ?? ('Maksym' as Child);
+
+const defaultState: State = { child: defaultChild };
 
 type Action = { type: 'changeChild'; payload: Child };
 
 const reducer = (state: State, action: Action): State => {
   switch (action.type) {
     case 'changeChild':
+      setLocalStorageItem('child', action.payload);
       return { ...state, child: action.payload };
     default:
       return state;
