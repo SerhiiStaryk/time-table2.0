@@ -63,7 +63,7 @@ const TIME_TABLE_2 = [
       { name: L.YA_DOSLIDZHUYU_SVIT, time: TIME[1] },
       { name: L.FIZKULTURA, time: TIME[2] },
       { name: L.UKRAYINSKA_MOVA, time: TIME[3] },
-      { name: L.FIZKULTURA, time: TIME[4] },
+      { name: L.YADS_UKRAYINSKA_MOVA, time: TIME[4] },
       { name: L.ANHLIYSKA_MOVA, time: TIME[5] },
     ],
   },
