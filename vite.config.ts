@@ -9,6 +9,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
+      devOptions: { enabled: true },
       includeAssets: ['icon512_maskable.png', 'icon512_rounded.png'],
       manifest: {
         id: '/time-table2.0/',

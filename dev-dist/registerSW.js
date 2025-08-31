@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) navigator.serviceWorker.register('/time-table2.0/dev-sw.js?dev-sw', { scope: '/time-table2.0/', type: 'classic' })
