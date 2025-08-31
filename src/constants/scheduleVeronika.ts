@@ -1,5 +1,6 @@
-import { DAYS, TIME_FIRST_CLASSES } from './time';
 import * as L from './lessons';
+import { DAYS } from './days';
+import { TIME_FIRST_CLASSES } from './time';
 
 const TIME_TABLE_1 = [
   {
