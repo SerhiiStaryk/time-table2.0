@@ -1,10 +1,9 @@
+import { PropsWithChildren } from 'react';
 import { Typography } from '@mui/material';
-import { ReactNode } from 'react';
 
-export type TextProps = {
+export type TextProps = PropsWithChildren<{
   mr?: number | string;
-  children: ReactNode;
-};
+}>;
 
 export const Text = ({ mr = 0, children }: TextProps) => (
   <Typography

@@ -1,5 +1,6 @@
-import { DAYS, TIME } from './date';
 import * as L from './lessons';
+import { DAYS } from './days';
+import { TIME } from './time';
 
 const TIME_TABLE_1 = [
   {

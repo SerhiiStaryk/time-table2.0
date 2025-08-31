@@ -1,7 +1,7 @@
-import { useMemo, useReducer, ReactNode } from 'react';
+import { useMemo, useReducer, PropsWithChildren } from 'react';
 import { ContextData } from './context/ContextData';
 import { ContextApi } from './context/ContextApi';
-import { getLocalStorageItem, setLocalStorageItem } from '../../helpers';
+import { getLocalStorageItem, setLocalStorageItem } from '@/helpers';
 
 export type Group = 'first' | 'second';
 
@@ -25,7 +25,7 @@ const reducer = (state: State, action: Action): State => {
   }
 };
 
-const GroupController = ({ children }: { children: ReactNode }) => {
+const GroupController = ({ children }: PropsWithChildren) => {
   const [state, dispatch] = useReducer(reducer, defaultState);
 
   const data = useMemo(() => ({ group: state.group }), [state.group]);

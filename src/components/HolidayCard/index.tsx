@@ -1,6 +1,6 @@
 import { Card, CardContent, Typography, useTheme } from '@mui/material';
-import { HOLIDAYS } from '../../constants/schedule';
-import { Divider } from '../Divider';
+import { HOLIDAYS } from '@/constants/schedule';
+import { Divider } from '@/components/Divider';
 
 export const HolidayCard = () => {
   const theme = useTheme();

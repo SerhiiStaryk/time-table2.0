@@ -1,7 +1,7 @@
 import { Box, Card, CardContent, Typography, useTheme } from '@mui/material';
-import { getActiveLessonCurrent, getArrFromObj } from '../../helpers';
-import { TIME } from '../../constants/date';
-import { Divider } from '../Divider';
+import { getActiveLessonCurrent, getArrFromObj } from '@/helpers';
+import { TIME } from '@/constants/time';
+import { Divider } from '@/components/Divider';
 
 export const BellCard = () => {
   const theme = useTheme();
@@ -35,7 +35,7 @@ export const BellCard = () => {
                 key={index}
                 component='li'
               >
-                {item.start} - {item.end} {isLessonCurrent && '✅'}
+                {item.start} - {item.end} {isLessonCurrent && '🟢'}
               </Box>
             );
           })}

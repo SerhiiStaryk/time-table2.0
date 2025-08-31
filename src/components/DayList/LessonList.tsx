@@ -1,9 +1,9 @@
 import { Grid } from '@mui/material';
-import { TIME_TABLE } from '../../constants/schedule';
-import { getCurrentDay } from '../../helpers';
-import { DayCard } from '../DayCard';
-import { useGroupData } from '../../controller/GroupController/hooks/useGroupData';
-import { useChildData } from '../../controller/ChildController/hooks/useChildData';
+import { TIME_TABLE } from '@/constants/schedule';
+import { getCurrentDay } from '@/helpers';
+import { useGroupData } from '@/controller/GroupController/hooks/useGroupData';
+import { useChildData } from '@/controller/ChildController/hooks/useChildData';
+import { DayCard } from '@/components/DayCard';
 
 const DayList = () => {
   const { group } = useGroupData();

@@ -1,7 +1,7 @@
 import { getActiveLessonCurrent } from '../../helpers';
 import { Box } from '@mui/material';
-import { Text } from '../Text';
-import { Lesson } from '../../types';
+import { Text } from '@/components/Text';
+import { Lesson } from '@/types';
 
 export type LessonItemProps = {
   lesson: Lesson;
@@ -21,7 +21,7 @@ export const LessonItem = ({ lesson, active, idx }: LessonItemProps) => {
       </Box>
       <Text>
         {lesson.time.start} - {lesson.time.end}
-        {isActive && '✅'}
+        {isActive && '🟢'}
       </Text>
     </Box>
   );

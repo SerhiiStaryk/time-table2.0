@@ -1,4 +1,6 @@
-import { DayNames, DAYS, MONTHS } from '../constants/date';
+import { DAYS } from '@/constants/days';
+import { MONTHS } from '@/constants/months';
+import { DayNames } from '@/types/date';
 
 export const getCurrentDate = () => new Date();
 
