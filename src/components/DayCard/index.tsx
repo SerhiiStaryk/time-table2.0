@@ -1,9 +1,11 @@
 import { CardContent, Typography } from '@mui/material';
-import { DayNames, DAYS } from '../../constants/date';
-import { LessonItem } from '../LessonItem';
-import { Card } from '../ui/Card';
-import { Item } from './types';
-import { Divider } from '../Divider';
+import { LessonItem } from '@/components/LessonItem';
+import { Card } from '@/components/ui/Card';
+
+import { Divider } from '@/components/Divider';
+import { DayNames } from '@/types/date';
+import { DAYS } from '@/constants/days';
+import { Item } from '@/types/item';
 
 type DayCardProps = {
   item: Item;

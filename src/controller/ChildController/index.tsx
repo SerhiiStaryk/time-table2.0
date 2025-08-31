@@ -1,7 +1,7 @@
-import { useMemo, useReducer } from 'react';
+import { PropsWithChildren, useMemo, useReducer } from 'react';
 import { ContextData } from './context/ContextData';
 import { ContextApi } from './context/ContextApi';
-import { getLocalStorageItem, setLocalStorageItem } from '../../helpers';
+import { getLocalStorageItem, setLocalStorageItem } from '@/helpers';
 
 export type Child = 'Maksym' | 'Veronika';
 
@@ -25,7 +25,7 @@ const reducer = (state: State, action: Action): State => {
   }
 };
 
-const ChildController = ({ children }: { children: React.ReactNode }) => {
+const ChildController = ({ children }: PropsWithChildren) => {
   const [state, dispatch] = useReducer(reducer, defaultState);
 
   const data = useMemo(() => ({ child: state.child }), [state.child]);

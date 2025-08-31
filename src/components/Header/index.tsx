@@ -1,11 +1,11 @@
 import { Box, AppBar, Select, MenuItem, Container, Typography } from '@mui/material';
-import { getFormattedCurrentDate } from '../../helpers';
-import ColorModeIconDropdown from '../../theme/ColorModeIconDropdown';
-import { Toolbar } from '../ui/Toolbar';
-import { CHILDREN_OPTIONS } from '../../constants/children';
-import { useChildData } from '../../controller/ChildController/hooks/useChildData';
-import { useChildApi } from '../../controller/ChildController/hooks/useChildApi';
-import { Child } from '../../controller/ChildController';
+import { getFormattedCurrentDate } from '@/helpers';
+import ColorModeIconDropdown from '@/theme/ColorModeIconDropdown';
+import { Toolbar } from '@/components/ui/Toolbar';
+import { CHILDREN_OPTIONS } from '@/constants/children';
+import { useChildData } from '@/controller/ChildController/hooks/useChildData';
+import { useChildApi } from '@/controller/ChildController/hooks/useChildApi';
+import { Child } from '@/controller/ChildController';
 
 export const Header = () => {
   const { child } = useChildData();

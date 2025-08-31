@@ -1,6 +1,6 @@
 import { Box, Button, Typography, useColorScheme, useTheme } from '@mui/material';
-import { useGroupData } from '../../controller/GroupController/hooks/useGroupData';
-import { useGroupApi } from '../../controller/GroupController/hooks/useGroupApi';
+import { useGroupData } from '@/controller/GroupController/hooks/useGroupData';
+import { useGroupApi } from '@/controller/GroupController/hooks/useGroupApi';
 
 export const Switcher = () => {
   const { group } = useGroupData();

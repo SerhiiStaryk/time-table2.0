@@ -1,33 +1,6 @@
-export type DayNames = 'sun' | 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat';
+import { LessonTime } from '../types/lessonTime';
 
-export const DAYS = {
-  sun: 'Неділя',
-  mon: 'Понеділок',
-  tue: 'Вівторок',
-  wed: 'Середа',
-  thu: 'Четвер',
-  fri: "П'ятниця",
-  sat: 'Cубота',
-};
-
-export const MONTHS = [
-  'січня',
-  'лютого',
-  'березня',
-  'квітня',
-  'травня',
-  'червня',
-  'липня',
-  'серпня',
-  'вересня',
-  'жовтня',
-  'листопада',
-  'грудня',
-];
-
-export const SHORT_NAME_DAYS = Object.keys(DAYS);
-
-export const TIME = {
+export const TIME: Record<number, LessonTime> = {
   1: { start: '8:30', end: '9:15' },
   2: { start: '9:25', end: '10:10' },
   3: { start: '10:20', end: '11:05' },
@@ -41,7 +14,7 @@ export const TIME = {
   11: { start: '17:50', end: '18:30' },
 };
 
-export const TIME_FIRST_CLASSES = {
+export const TIME_FIRST_CLASSES: Record<number, LessonTime> = {
   1: { start: '8:30', end: '9:15' },
   2: { start: '9:25', end: '10:10' },
   3: { start: '10:20', end: '11:05' },
