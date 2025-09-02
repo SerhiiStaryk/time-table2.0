@@ -1,10 +1,13 @@
 import { Box, Card, CardContent, Typography, useTheme } from '@mui/material';
 import { getActiveLessonCurrent, getArrFromObj } from '@/helpers';
-import { TIME } from '@/constants/time';
+import { SCHEDULE_BELLS } from '@/constants/time';
 import { Divider } from '@/components/Divider';
+import { useChildData } from '@/controller/ChildController/hooks/useChildData';
 
 export const BellCard = () => {
   const theme = useTheme();
+  const { child } = useChildData();
+
   return (
     <Card
       sx={[
@@ -28,7 +31,7 @@ export const BellCard = () => {
         </Typography>
         <Divider />
         <Box component='ol'>
-          {getArrFromObj(TIME).map((item, index) => {
+          {getArrFromObj(SCHEDULE_BELLS[child]).map((item, index) => {
             const isLessonCurrent = getActiveLessonCurrent(item.start, item.end);
             return (
               <Box
