@@ -9,7 +9,7 @@ export type State = {
   group: Group;
 };
 
-const defaultGroup: Group = (getLocalStorageItem('group') as Group) ?? ('first' as Group);
+const defaultGroup: Group = (getLocalStorageItem('group') as Group) ?? ('second' as Group);
 
 const defaultState: State = { group: defaultGroup };
 
