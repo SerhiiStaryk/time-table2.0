@@ -10,22 +10,27 @@ export const TIME_TABLE = {
 export const HOLIDAYS = [
   {
     name: Holidays.KANIKULY_OSINNI,
-    start: '21.10.2024',
-    end: '25.10.2024',
+    start: '27.10.2025',
+    end: '31.10.2025',
   },
   {
     name: Holidays.KANIKULY_ZYMOVI,
-    start: '23.12.2024',
-    end: '07.01.2025',
+    start: '24.12.2025',
+    end: '11.07.2026',
   },
   {
     name: Holidays.KANIKULY_VESNIANI,
-    start: '24.03.2025',
-    end: '28.03.2025',
+    start: '23.03.2026',
+    end: '27.03.2026',
   },
   {
     name: Holidays.VELYKODNI_SVIATKUVANNIA,
-    start: '14.04.2025',
-    end: '21.04.2025',
+    start: '10.04.2026',
+    end: '13.04.2026',
+  },
+  {
+    name: Holidays.DLYA_PERSHOKLASNYKIV,
+    start: '16.02.2026',
+    end: '20.02.2026',
   },
 ];
