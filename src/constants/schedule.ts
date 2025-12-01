@@ -16,7 +16,7 @@ export const HOLIDAYS = [
   {
     name: Holidays.KANIKULY_ZYMOVI,
     start: '24.12.2025',
-    end: '11.07.2026',
+    end: '11.01.2026',
   },
   {
     name: Holidays.KANIKULY_VESNIANI,
