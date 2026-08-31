@@ -1,9 +1,17 @@
-import { Box, Button, Typography, useColorScheme, useTheme } from '@mui/material';
-import { useGroupData } from '@/controller/GroupController/hooks/useGroupData';
+import { useChildData } from '@/controller/ChildController/hooks/useChildData';
 import { useGroupApi } from '@/controller/GroupController/hooks/useGroupApi';
+import { useGroupData } from '@/controller/GroupController/hooks/useGroupData';
+import {
+  Box,
+  Button,
+  Typography,
+  useColorScheme,
+  useTheme,
+} from '@mui/material';
 
 export const Switcher = () => {
   const { group } = useGroupData();
+  const { child } = useChildData();
   const { changeGroup } = useGroupApi();
 
   const theme = useTheme();
@@ -11,14 +19,16 @@ export const Switcher = () => {
 
   const usedTheme = systemMode ? systemMode : mode;
 
+  const isGroup = child === 'Veronika';
+
   return (
     <>
-      <Typography
-        variant='subtitle2'
-        sx={{ alignSelf: 'flex-end', mr: 2 }}
-      >
-        Група
-      </Typography>
+      {isGroup && (
+        <Typography variant="subtitle2" sx={{ alignSelf: 'flex-end', mr: 2 }}>
+          Група
+        </Typography>
+      )}
+
       <Box sx={{ display: 'flex', mb: 4, alignSelf: 'flex-end' }}>
         <Box
           sx={{
@@ -37,7 +47,10 @@ export const Switcher = () => {
               borderRadius: '20px',
               position: 'absolute',
               transition: 'all 0.5s ease',
-              background: usedTheme === 'dark' ? theme.palette.grey[700] : theme.palette.grey[300],
+              background:
+                usedTheme === 'dark'
+                  ? theme.palette.grey[700]
+                  : theme.palette.grey[300],
             }}
             style={{
               transform: `translateX(${group === 'first' ? 0 : '100px'})`,
@@ -45,7 +58,7 @@ export const Switcher = () => {
           />
           <Button
             disableRipple
-            variant='text'
+            variant="text"
             sx={{
               borderRadius: '20px',
               width: '100px',
@@ -56,11 +69,11 @@ export const Switcher = () => {
             }}
             onClick={() => changeGroup('first')}
           >
-            Перша
+            {isGroup ? 'Перша' : 'Чисельник'}
           </Button>
           <Button
             disableRipple
-            variant='text'
+            variant="text"
             sx={{
               borderRadius: '20px',
               width: '100px',
@@ -71,7 +84,7 @@ export const Switcher = () => {
             }}
             onClick={() => changeGroup('second')}
           >
-            Друга
+            {isGroup ? 'Друга' : 'Знаменник'}
           </Button>
         </Box>
       </Box>
