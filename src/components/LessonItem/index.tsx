@@ -1,7 +1,7 @@
-import { getActiveLessonCurrent } from '../../helpers';
-import { Box } from '@mui/material';
 import { Text } from '@/components/Text';
 import { Lesson } from '@/types';
+import { Box } from '@mui/material';
+import { getActiveLessonCurrent } from '../../helpers';
 
 export type LessonItemProps = {
   lesson: Lesson;
@@ -10,7 +10,10 @@ export type LessonItemProps = {
 };
 
 export const LessonItem = ({ lesson, active, idx }: LessonItemProps) => {
-  const isLessonCurrent = getActiveLessonCurrent(lesson.time.start, lesson.time.end);
+  const isLessonCurrent = getActiveLessonCurrent(
+    lesson.time.start,
+    lesson.time.end,
+  );
   const isActive = active && isLessonCurrent;
 
   return (
@@ -18,6 +21,11 @@ export const LessonItem = ({ lesson, active, idx }: LessonItemProps) => {
       <Box>
         <Text mr={1}>{`${idx + 1}`}.</Text>
         <Text>{lesson.name}</Text>
+        {lesson.cab && (
+          <Text ml={1} color="success.main">
+            ({lesson.cab})
+          </Text>
+        )}
       </Box>
       <Text>
         {lesson.time.start} - {lesson.time.end}

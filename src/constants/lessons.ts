@@ -12,3 +12,13 @@ export const YADS_PRYRODA = 'ЯДС (природа)';
 export const YADS_TRUD_NAV = 'ЯДС (труд. нав.)';
 export const YADS_UKRAYINSKA_MOVA = 'ЯДС (українська мова)';
 export const YADS_MATEMATYKA = 'ЯДС (математика)';
+
+export const ZARUBIZHNA_LITERATURA = 'Зарубіжна Література';
+export const PIZNAYEMO_PRYRODU = 'Пізнаємо природу';
+export const ROBOTOTEKHNIKA = 'Робототехніка';
+export const ETYKA = 'Етика';
+export const ZDOROVYA_BEZPEKA_DOBROBUT = "Здоров'я, безпека, добробут";
+export const NIMETSKA_MOVA = 'Німецька мова';
+export const VSTUP_DO_ISTORIYI = 'Вступ до історії';
+export const TEKHNOLOHIYI = 'Технології';
+export const UKRAYINSKA_LITERATURA = 'Українська література'
