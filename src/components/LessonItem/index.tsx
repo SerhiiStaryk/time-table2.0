@@ -21,7 +21,7 @@ export const LessonItem = ({ lesson, active, idx }: LessonItemProps) => {
       <Box>
         <Text mr={1}>{`${idx + 1}`}.</Text>
         <Text>{lesson.name}</Text>
-        {lesson.cab && (
+        {lesson?.cab && (
           <Text ml={1} color="success.main">
             ({lesson.cab})
           </Text>
