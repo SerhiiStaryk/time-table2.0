@@ -4,5 +4,5 @@ export type Lesson = {
     start: string;
     end: string;
   };
-  cab?: string | number;
+  cab?: string | number | null;
 };
