@@ -28,12 +28,12 @@ const TIME_TABLE_1 = [
   {
     day: DAYS.wed,
     lessons: [
-      { name: L.VSTUP_DO_ISTORIYI, time: TIME[6], cab: null },
-      { name: L.UKRAYINSKA_MOVA, time: TIME[7], cab: null },
-      { name: L.MATEMATYKA, time: TIME[8], cab: null },
+      { name: L.VSTUP_DO_ISTORIYI, time: TIME[6], cab: 301 },
+      { name: L.UKRAYINSKA_MOVA, time: TIME[7], cab: '114/313' },
+      { name: L.MATEMATYKA, time: TIME[8], cab: 113 },
       { name: L.FIZKULTURA, time: TIME[9], cab: null },
-      { name: L.TEKHNOLOHIYI, time: TIME[10], cab: null },
-      { name: L.UKRAYINSKA_LITERATURA, time: TIME[11], cab: null },
+      { name: L.TEKHNOLOHIYI, time: TIME[10], cab: '114/116' },
+      { name: L.UKRAYINSKA_LITERATURA, time: TIME[11], cab: 314 },
     ],
   },
   {
@@ -87,12 +87,12 @@ const TIME_TABLE_2 = [
   {
     day: DAYS.wed,
     lessons: [
-      { name: L.VSTUP_DO_ISTORIYI, time: TIME[6], cab: null },
-      { name: L.UKRAYINSKA_MOVA, time: TIME[7], cab: null },
-      { name: L.MATEMATYKA, time: TIME[8], cab: null },
+      { name: L.VSTUP_DO_ISTORIYI, time: TIME[6], cab: 301 },
+      { name: L.UKRAYINSKA_MOVA, time: TIME[7], cab: '114/313' },
+      { name: L.MATEMATYKA, time: TIME[8], cab: 113 },
       { name: L.FIZKULTURA, time: TIME[9], cab: null },
-      { name: L.TEKHNOLOHIYI, time: TIME[10], cab: null },
-      { name: L.UKRAYINSKA_LITERATURA, time: TIME[11], cab: null },
+      { name: L.TEKHNOLOHIYI, time: TIME[10], cab: '114/116' },
+      { name: L.UKRAYINSKA_LITERATURA, time: TIME[11], cab: 314 },
     ],
   },
   {
