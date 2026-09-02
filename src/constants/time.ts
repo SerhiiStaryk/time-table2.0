@@ -18,12 +18,12 @@ export const TIME: TimeType = {
 };
 
 export const TIME_FIRST_CLASSES: TimeType = {
-  1: { start: '8:30', end: '9:05' },
-  2: { start: '9:25', end: '10:00' },
-  3: { start: '10:20', end: '10:55' },
-  4: { start: '11:15', end: '11:50' },
-  5: { start: '12:15', end: '12:50' },
-  6: { start: '13:10', end: '13:45' },
+  1: { start: '8:30', end: '9:10' },
+  2: { start: '9:25', end: '10:05' },
+  3: { start: '10:20', end: '11:00' },
+  4: { start: '11:15', end: '11:55' },
+  5: { start: '12:15', end: '12:55' },
+  6: { start: '13:10', end: '13:50' },
 };
 
 export const SCHEDULE_BELLS: ScheduleBellsType = {
