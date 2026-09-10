@@ -10,7 +10,7 @@ const TIME_TABLE_1 = [
       { name: L.UKRAYINSKA_MOVA, time: TIME_FIRST_CLASSES[2] },
       { name: L.FIZKULTURA, time: TIME_FIRST_CLASSES[3] },
       { name: L.UKRAYINSKA_MOVA, time: TIME_FIRST_CLASSES[4] },
-      { name: L.ANHLIYSKA_MOVA, time: TIME_FIRST_CLASSES[4] },
+      { name: L.ANHLIYSKA_MOVA, time: TIME_FIRST_CLASSES[5] },
     ],
   },
   {
@@ -40,7 +40,7 @@ const TIME_TABLE_1 = [
       { name: L.ANHLIYSKA_MOVA, time: TIME_FIRST_CLASSES[2] },
       { name: L.YADS_PRYRODA, time: TIME_FIRST_CLASSES[3] },
       { name: L.UKRAYINSKA_MOVA, time: TIME_FIRST_CLASSES[4] },
-      { name: L.FIZKULTURA, time: TIME_FIRST_CLASSES[4] },
+      { name: L.FIZKULTURA, time: TIME_FIRST_CLASSES[5] },
     ],
   },
   {
@@ -63,7 +63,7 @@ const TIME_TABLE_2 = [
       { name: L.FIZKULTURA, time: TIME_FIRST_CLASSES[2] },
       { name: L.UKRAYINSKA_MOVA, time: TIME_FIRST_CLASSES[3] },
       { name: L.ANHLIYSKA_MOVA, time: TIME_FIRST_CLASSES[4] },
-      { name: L.UKRAYINSKA_MOVA, time: TIME_FIRST_CLASSES[4] },
+      { name: L.UKRAYINSKA_MOVA, time: TIME_FIRST_CLASSES[5] },
     ],
   },
   {
@@ -93,7 +93,7 @@ const TIME_TABLE_2 = [
       { name: L.UKRAYINSKA_MOVA, time: TIME_FIRST_CLASSES[2] },
       { name: L.YADS_PRYRODA, time: TIME_FIRST_CLASSES[3] },
       { name: L.FIZKULTURA, time: TIME_FIRST_CLASSES[4] },
-      { name: L.UKRAYINSKA_MOVA, time: TIME_FIRST_CLASSES[4] },
+      { name: L.UKRAYINSKA_MOVA, time: TIME_FIRST_CLASSES[5] },
     ],
   },
   {
