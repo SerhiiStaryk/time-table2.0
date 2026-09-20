@@ -1,10 +1,12 @@
+import type { Lesson } from '@/types';
+import type { Item } from '@/types/item';
 import { DAYS } from './days';
 import * as L from './lessons';
 import { TIME } from './time';
 
-const LESSONS: {
-  [key: string]: { name: string; cab: number | string | null };
-} = {
+type LessonDetails = Pick<Lesson, 'name' | 'cab'>;
+
+const LESSONS: Record<string, LessonDetails> = {
   [L.ZDOROVYA_BEZPEKA_DOBROBUT]: {
     name: L.ZDOROVYA_BEZPEKA_DOBROBUT,
     cab: 313,
@@ -16,9 +18,9 @@ const LESSONS: {
   [L.NIMETSKA_MOVA]: { name: L.NIMETSKA_MOVA, cab: 316 },
   [L.ZARUBIZHNA_LITERATURA]: { name: L.ZARUBIZHNA_LITERATURA, cab: 113 },
   [L.PIZNAYEMO_PRYRODU]: { name: L.PIZNAYEMO_PRYRODU, cab: 202 },
-  [L.ROBOTOTEKHNIKA]: { name: L.ROBOTOTEKHNIKA, cab: null },
+  [L.ROBOTOTEKHNIKA]: { name: L.ROBOTOTEKHNIKA, cab: 206 },
   [L.VSTUP_DO_ISTORIYI]: { name: L.VSTUP_DO_ISTORIYI, cab: 301 },
-  [L.TEKHNOLOHIYI]: { name: L.TEKHNOLOHIYI, cab: '114/116' },
+  [L.TEKHNOLOHIYI]: { name: L.TEKHNOLOHIYI, cab: 116 },
   [L.UKRAYINSKA_LITERATURA]: { name: L.UKRAYINSKA_LITERATURA, cab: 306 },
   [L.KHOREOHRAFIYA]: { name: L.KHOREOHRAFIYA, cab: null },
   [L.INFORMATYKA]: { name: L.INFORMATYKA, cab: 309 },
@@ -33,7 +35,7 @@ const TIME_TABLE_1 = [
     lessons: [
       { ...LESSONS[L.ZDOROVYA_BEZPEKA_DOBROBUT], time: TIME[5] },
       { ...LESSONS[L.FIZKULTURA], time: TIME[6] },
-      { ...LESSONS[L.UKRAYINSKA_LITERATURA], time: TIME[7] },
+      { ...LESSONS[L.UKRAYINSKA_MOVA], time: TIME[7], cab: 306 },
       { ...LESSONS[L.MATEMATYKA], time: TIME[8] },
       { ...LESSONS[L.ANHLIYSKA_MOVA], time: TIME[9] },
       { ...LESSONS[L.NIMETSKA_MOVA], time: TIME[10] },
@@ -45,7 +47,7 @@ const TIME_TABLE_1 = [
       { ...LESSONS[L.ZARUBIZHNA_LITERATURA], time: TIME[6] },
       { ...LESSONS[L.MATEMATYKA], time: TIME[7], cab: 301 },
       { ...LESSONS[L.ANHLIYSKA_MOVA], time: TIME[8] },
-      { ...LESSONS[L.UKRAYINSKA_MOVA], time: TIME[9] },
+      { ...LESSONS[L.UKRAYINSKA_LITERATURA], time: TIME[9], cab: 314 },
       { ...LESSONS[L.PIZNAYEMO_PRYRODU], time: TIME[10] },
       { ...LESSONS[L.OBRAZOTVORCHE], time: TIME[11] },
     ],
@@ -53,11 +55,11 @@ const TIME_TABLE_1 = [
   {
     day: DAYS.wed,
     lessons: [
-      { ...LESSONS[L.UKRAYINSKA_LITERATURA], time: TIME[4] },
+      { ...LESSONS[L.UKRAYINSKA_LITERATURA], time: TIME[4], cab: 212 },
       { ...LESSONS[L.FIZKULTURA], time: TIME[5] },
       { ...LESSONS[L.VSTUP_DO_ISTORIYI], time: TIME[6] },
-      { ...LESSONS[L.UKRAYINSKA_MOVA], time: TIME[7] },
-      { ...LESSONS[L.MATEMATYKA], time: TIME[8] },
+      { ...LESSONS[L.UKRAYINSKA_MOVA], time: TIME[7], cab: 209 },
+      { ...LESSONS[L.MATEMATYKA], time: TIME[8], cab: 113 },
       { ...LESSONS[L.ROBOTOTEKHNIKA], time: TIME[9] },
       { ...LESSONS[L.TEKHNOLOHIYI], time: TIME[10] },
     ],
@@ -66,7 +68,7 @@ const TIME_TABLE_1 = [
     day: DAYS.thu,
     lessons: [
       { ...LESSONS[L.KHOREOHRAFIYA], time: TIME[5] },
-      { ...LESSONS[L.UKRAYINSKA_MOVA], time: TIME[6] },
+      { ...LESSONS[L.UKRAYINSKA_MOVA], time: TIME[6], cab: 114 },
       { ...LESSONS[L.MATEMATYKA], time: TIME[7], cab: 310 },
       { ...LESSONS[L.MATEMATYKA], time: TIME[8], cab: 315 },
       { ...LESSONS[L.ANHLIYSKA_MOVA], time: TIME[9] },
@@ -83,7 +85,7 @@ const TIME_TABLE_1 = [
       { ...LESSONS[L.NIMETSKA_MOVA], time: TIME[10] },
     ],
   },
-];
+] satisfies Item[];
 
 const TIME_TABLE_2 = [
   {
@@ -92,7 +94,7 @@ const TIME_TABLE_2 = [
       { ...LESSONS[L.ETYKA], time: TIME[4] },
       { ...LESSONS[L.ZDOROVYA_BEZPEKA_DOBROBUT], time: TIME[5] },
       { ...LESSONS[L.FIZKULTURA], time: TIME[6] },
-      { ...LESSONS[L.UKRAYINSKA_LITERATURA], time: TIME[7] },
+      { ...LESSONS[L.UKRAYINSKA_MOVA], time: TIME[7], cab: 306 },
       { ...LESSONS[L.MATEMATYKA], time: TIME[8] },
       { ...LESSONS[L.ANHLIYSKA_MOVA], time: TIME[9] },
       { ...LESSONS[L.NIMETSKA_MOVA], time: TIME[10] },
@@ -104,7 +106,7 @@ const TIME_TABLE_2 = [
       { ...LESSONS[L.ZARUBIZHNA_LITERATURA], time: TIME[6] },
       { ...LESSONS[L.MATEMATYKA], time: TIME[7], cab: 301 },
       { ...LESSONS[L.ANHLIYSKA_MOVA], time: TIME[8] },
-      { ...LESSONS[L.UKRAYINSKA_MOVA], time: TIME[9] },
+      { ...LESSONS[L.UKRAYINSKA_LITERATURA], time: TIME[9], cab: 314 },
       { ...LESSONS[L.PIZNAYEMO_PRYRODU], time: TIME[10] },
       { ...LESSONS[L.MUZYKA], time: TIME[11] },
     ],
@@ -112,11 +114,11 @@ const TIME_TABLE_2 = [
   {
     day: DAYS.wed,
     lessons: [
-      { ...LESSONS[L.UKRAYINSKA_LITERATURA], time: TIME[4] },
+      { ...LESSONS[L.UKRAYINSKA_LITERATURA], time: TIME[4], cab: 212 },
       { ...LESSONS[L.FIZKULTURA], time: TIME[5] },
       { ...LESSONS[L.VSTUP_DO_ISTORIYI], time: TIME[6] },
-      { ...LESSONS[L.UKRAYINSKA_MOVA], time: TIME[7] },
-      { ...LESSONS[L.MATEMATYKA], time: TIME[8] },
+      { ...LESSONS[L.UKRAYINSKA_MOVA], time: TIME[7], cab: 209 },
+      { ...LESSONS[L.MATEMATYKA], time: TIME[8], cab: 113 },
       { ...LESSONS[L.ROBOTOTEKHNIKA], time: TIME[9] },
       { ...LESSONS[L.TEKHNOLOHIYI], time: TIME[10] },
     ],
@@ -125,7 +127,7 @@ const TIME_TABLE_2 = [
     day: DAYS.thu,
     lessons: [
       { ...LESSONS[L.KHOREOHRAFIYA], time: TIME[5] },
-      { ...LESSONS[L.UKRAYINSKA_MOVA], time: TIME[6] },
+      { ...LESSONS[L.UKRAYINSKA_MOVA], time: TIME[6], cab: 114 },
       { ...LESSONS[L.MATEMATYKA], time: TIME[7], cab: 310 },
       { ...LESSONS[L.MATEMATYKA], time: TIME[8], cab: 315 },
       { ...LESSONS[L.ANHLIYSKA_MOVA], time: TIME[9] },
@@ -142,6 +144,6 @@ const TIME_TABLE_2 = [
       { ...LESSONS[L.NIMETSKA_MOVA], time: TIME[10] },
     ],
   },
-];
+] satisfies Item[];
 
 export { TIME_TABLE_1, TIME_TABLE_2 };
