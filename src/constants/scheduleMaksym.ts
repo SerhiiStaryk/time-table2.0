@@ -18,7 +18,7 @@ const LESSONS: Record<string, LessonDetails> = {
   [L.NIMETSKA_MOVA]: { name: L.NIMETSKA_MOVA, cab: 316 },
   [L.ZARUBIZHNA_LITERATURA]: { name: L.ZARUBIZHNA_LITERATURA, cab: 113 },
   [L.PIZNAYEMO_PRYRODU]: { name: L.PIZNAYEMO_PRYRODU, cab: 202 },
-  [L.ROBOTOTEKHNIKA]: { name: L.ROBOTOTEKHNIKA, cab: 206 },
+  [L.ROBOTOTEKHNIKA]: { name: L.ROBOTOTEKHNIKA, cab: 301 },
   [L.VSTUP_DO_ISTORIYI]: { name: L.VSTUP_DO_ISTORIYI, cab: 301 },
   [L.TEKHNOLOHIYI]: { name: L.TEKHNOLOHIYI, cab: 116 },
   [L.UKRAYINSKA_LITERATURA]: { name: L.UKRAYINSKA_LITERATURA, cab: 306 },
@@ -108,12 +108,12 @@ const TIME_TABLE_2 = [
       { ...LESSONS[L.ANHLIYSKA_MOVA], time: TIME[8] },
       { ...LESSONS[L.UKRAYINSKA_LITERATURA], time: TIME[9], cab: 314 },
       { ...LESSONS[L.PIZNAYEMO_PRYRODU], time: TIME[10] },
-      { ...LESSONS[L.MUZYKA], time: TIME[11] },
     ],
   },
   {
     day: DAYS.wed,
     lessons: [
+      { ...LESSONS[L.MUZYKA], time: TIME[3] },
       { ...LESSONS[L.UKRAYINSKA_LITERATURA], time: TIME[4], cab: 212 },
       { ...LESSONS[L.FIZKULTURA], time: TIME[5] },
       { ...LESSONS[L.VSTUP_DO_ISTORIYI], time: TIME[6] },
