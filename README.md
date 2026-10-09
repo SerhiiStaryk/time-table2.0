@@ -47,11 +47,25 @@ The production-ready files are written to `dist/`.
 npm run preview
 ```
 
+## PWA install flow
+
+The app offers the browser's native install prompt in Chrome, Edge, Opera, and
+Samsung Internet on Android and desktop. Safari on iOS and macOS shows platform
+specific Add to Home Screen / Add to Dock instructions; Firefox shows its
+available install steps or suggests a supported browser. In-app browsers ask
+you to open the page in Safari or Chrome.
+
+To test installation, run `npm run build` and `npm run preview`, then open the
+preview over localhost or HTTPS. In Chrome DevTools, check **Application →
+Manifest → Installability**. To trigger `beforeinstallprompt` again after an
+installation, remove the app from `chrome://apps`.
+
 ### Check the project
 
 ```sh
 npm run compile  # Type-check without emitting files
 npm run lint     # Run ESLint
+npm test         # Run platform detection tests
 ```
 
 ## Deployment
