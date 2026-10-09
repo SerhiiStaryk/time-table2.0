@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
-import { VitePWA } from 'vite-plugin-pwa';
 import path from 'path';
+import { defineConfig } from 'vite';
+import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -14,31 +14,41 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: 'autoUpdate',
+      registerType: 'prompt',
       devOptions: { enabled: true },
-      includeAssets: ['icon512_maskable.png', 'icon512_rounded.png'],
+      includeAssets: [
+        'icon512_maskable.png',
+        'icon512_rounded.png',
+        'icons/icon-192.png',
+        'icons/icon-512.png',
+        'icons/icon-512-maskable.png',
+      ],
       manifest: {
         id: '/time-table2.0/',
         name: 'Розклад',
         short_name: 'Розклад',
         description: 'Розклад уроків',
-        start_url: '/time-table2.0/',
+        start_url: '/',
         display: 'standalone',
         background_color: '#ffffff',
         theme_color: '#ffffff',
         lang: 'uk-UA',
         icons: [
           {
-            src: 'icon512_maskable.png',
+            src: '/icons/icon-192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/icons/icon-512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+          {
+            src: '/icons/icon-512-maskable.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',
-          },
-          {
-            src: 'icon512_rounded.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any',
           },
         ],
         screenshots: [
@@ -67,7 +77,8 @@ export default defineConfig({
             },
           },
           {
-            urlPattern: /^https:\/\/serhiistaryk\.github\.io\/time-table2\.0\/.*/i,
+            urlPattern:
+              /^https:\/\/serhiistaryk\.github\.io\/time-table2\.0\/.*/i,
             handler: 'NetworkFirst',
             options: {
               cacheName: 'app-cache',
