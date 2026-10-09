@@ -14,31 +14,41 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: 'autoUpdate',
+      registerType: 'prompt',
       devOptions: { enabled: true },
-      includeAssets: ['icon512_maskable.png', 'icon512_rounded.png'],
+      includeAssets: [
+        'icon512_maskable.png',
+        'icon512_rounded.png',
+        'icons/icon-192.png',
+        'icons/icon-512.png',
+        'icons/icon-512-maskable.png',
+      ],
       manifest: {
         id: '/time-table2.0/',
         name: 'Розклад',
         short_name: 'Розклад',
         description: 'Розклад уроків',
-        start_url: '/time-table2.0/',
+        start_url: '/',
         display: 'standalone',
         background_color: '#ffffff',
         theme_color: '#ffffff',
         lang: 'uk-UA',
         icons: [
           {
-            src: 'icon512_maskable.png',
+            src: '/icons/icon-192.png',
+            sizes: '192x192',
+            type: 'image/png',
+          },
+          {
+            src: '/icons/icon-512.png',
+            sizes: '512x512',
+            type: 'image/png',
+          },
+          {
+            src: '/icons/icon-512-maskable.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',
-          },
-          {
-            src: 'icon512_rounded.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any',
           },
         ],
         screenshots: [
